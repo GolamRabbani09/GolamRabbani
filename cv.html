@@ -1,0 +1,756 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Golam Rabbani — Curriculum Vitae (CV)</title>
+
+    <!-- Google Fonts for High-End Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <style>
+      :root {
+        --primary: #0f172a;
+        --accent: #0f766e;
+        --accent-light: #f0fdfa;
+        --text-dark: #1e293b;
+        --text-muted: #475569;
+        --text-light: #64748b;
+        --border: #e2e8f0;
+        --bg: #f8fafc;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        background-color: var(--bg);
+        color: var(--text-dark);
+        line-height: 1.55;
+        font-size: 9.5pt;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* Floating Action Bar (Hidden in Print) */
+      .action-bar {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+        display: flex;
+        gap: 10px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        border-radius: 9999px;
+        background: rgba(15, 23, 42, 0.9);
+        backdrop-filter: blur(12px);
+        padding: 8px 16px;
+      }
+
+      .action-btn {
+        background: #10b981;
+        color: #fff;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 9999px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+
+      .action-btn:hover {
+        background: #059669;
+        transform: translateY(-1px);
+      }
+
+      .action-btn.secondary {
+        background: rgba(255, 255, 255, 0.15);
+        color: #fff;
+      }
+
+      .action-btn.secondary:hover {
+        background: rgba(255, 255, 255, 0.25);
+      }
+
+      /* CV Container (A4 Dimensions) */
+      .cv-container {
+        max-width: 820px;
+        margin: 40px auto 60px auto;
+        background: #ffffff;
+        padding: 45px 50px;
+        border-radius: 4px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        border: 1px solid var(--border);
+      }
+
+      /* Header Section */
+      .header {
+        border-bottom: 2px solid var(--accent);
+        padding-bottom: 18px;
+        margin-bottom: 20px;
+      }
+
+      .name-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 8px;
+      }
+
+      .name-title h1 {
+        font-size: 24pt;
+        font-weight: 800;
+        color: var(--primary);
+        letter-spacing: -0.5px;
+        line-height: 1.1;
+      }
+
+      .name-title .role-tagline {
+        font-size: 11pt;
+        font-weight: 600;
+        color: var(--accent);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .contact-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+        font-size: 8.8pt;
+        color: var(--text-muted);
+        margin-top: 8px;
+      }
+
+      .contact-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        text-decoration: none;
+        color: var(--text-muted);
+      }
+
+      .contact-item i {
+        color: var(--accent);
+        font-size: 9pt;
+      }
+
+      .contact-item a {
+        color: var(--text-muted);
+        text-decoration: none;
+      }
+
+      .contact-item a:hover {
+        color: var(--accent);
+        text-decoration: underline;
+      }
+
+      /* Section Styling */
+      .cv-section {
+        margin-bottom: 18px;
+      }
+
+      .section-title {
+        font-size: 11pt;
+        font-weight: 700;
+        color: var(--primary);
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+        border-bottom: 1.5px solid var(--border);
+        padding-bottom: 4px;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .section-title i {
+        color: var(--accent);
+        font-size: 10pt;
+      }
+
+      /* Professional Summary */
+      .summary-text {
+        font-size: 9.2pt;
+        color: var(--text-dark);
+        line-height: 1.6;
+        text-align: justify;
+      }
+
+      /* Skills Grid */
+      .skills-table {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        font-size: 9pt;
+      }
+
+      .skill-row {
+        display: grid;
+        grid-template-columns: 140px 1fr;
+        gap: 12px;
+        align-items: baseline;
+      }
+
+      .skill-category {
+        font-weight: 700;
+        color: var(--primary);
+        font-size: 8.8pt;
+      }
+
+      .skill-list {
+        color: var(--text-dark);
+      }
+
+      /* Experience / Projects / Research Item */
+      .item-entry {
+        margin-bottom: 14px;
+      }
+
+      .item-entry:last-child {
+        margin-bottom: 0;
+      }
+
+      .item-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 3px;
+      }
+
+      .item-title-group {
+        display: flex;
+        align-items: baseline;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      .item-title {
+        font-size: 10pt;
+        font-weight: 700;
+        color: var(--primary);
+      }
+
+      .item-subtitle {
+        font-size: 9pt;
+        font-weight: 600;
+        color: var(--accent);
+      }
+
+      .item-date-loc {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 8.2pt;
+        color: var(--text-light);
+        font-weight: 500;
+        white-space: nowrap;
+      }
+
+      .item-tech-stack {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 8pt;
+        color: var(--accent);
+        margin-bottom: 4px;
+        font-weight: 500;
+      }
+
+      .item-bullets {
+        list-style-type: square;
+        padding-left: 16px;
+        color: var(--text-dark);
+        font-size: 9pt;
+      }
+
+      .item-bullets li {
+        margin-bottom: 3px;
+        line-height: 1.5;
+      }
+
+      .item-bullets li strong {
+        color: var(--primary);
+        font-weight: 600;
+      }
+
+      /* Links inside items */
+      .item-link {
+        font-size: 8pt;
+        color: var(--accent);
+        text-decoration: none;
+        margin-left: 6px;
+        font-weight: 600;
+      }
+
+      .item-link:hover {
+        text-decoration: underline;
+      }
+
+      /* Education Block */
+      .edu-card {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 4px;
+      }
+
+      .edu-degree {
+        font-size: 10pt;
+        font-weight: 700;
+        color: var(--primary);
+      }
+
+      .edu-school {
+        font-size: 9pt;
+        font-weight: 600;
+        color: var(--text-dark);
+      }
+
+      .edu-details {
+        font-size: 8.8pt;
+        color: var(--text-muted);
+        margin-top: 2px;
+      }
+
+      /* PRINT STYLES (A4 Perfect PDF Export) */
+      @media print {
+        body {
+          background: #ffffff;
+          font-size: 9pt;
+        }
+
+        .action-bar {
+          display: none !important;
+        }
+
+        .cv-container {
+          max-width: 100%;
+          margin: 0;
+          padding: 0;
+          border: none;
+          box-shadow: none;
+        }
+
+        .header {
+          padding-bottom: 12px;
+          margin-bottom: 14px;
+        }
+
+        .cv-section {
+          margin-bottom: 14px;
+          page-break-inside: avoid;
+        }
+
+        .item-entry {
+          page-break-inside: avoid;
+          margin-bottom: 10px;
+        }
+
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+
+        @page {
+          size: A4;
+          margin: 12mm 15mm;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- FLOATING ACTION CONTROLS -->
+    <div class="action-bar">
+      <a href="index.html" class="action-btn secondary">
+        <i class="fa-solid fa-arrow-left"></i> Portfolio
+      </a>
+      <button onclick="window.print()" class="action-btn">
+        <i class="fa-solid fa-file-pdf"></i> Download PDF / Print
+      </button>
+    </div>
+
+    <!-- MAIN CV CONTAINER -->
+    <main class="cv-container">
+      <!-- HEADER -->
+      <header class="header">
+        <div class="name-title">
+          <h1>GOLAM RABBANI</h1>
+          <div class="role-tagline">
+            Full-Stack Web Application Software & AI Engineering
+          </div>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:golamrabbani.dev0@gmail.com"
+              >golamrabbani.dev0@gmail.com</a
+            >
+          </div>
+          <div class="contact-item">
+            <i class="fa-brands fa-github"></i>
+            <a href="https://github.com/GolamRabbani09" target="_blank"
+              >github.com/GolamRabbani09</a
+            >
+          </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-globe"></i>
+            <a
+              href="https://golamrabbani09.github.io/GolamRabbani.github.io/index.html"
+              target="_blank"
+              >https://golamrabbani09.github.io/GolamRabbani.github.io/index.html</a
+            >
+          </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Dhaka, Bangladesh </span>
+          </div>
+        </div>
+      </header>
+
+      <!-- PROFESSIONAL SUMMARY -->
+      <section class="cv-section">
+        <h2 class="section-title">
+          <i class="fa-solid fa-user"></i> Professional Summary
+        </h2>
+        <p class="summary-text">
+          Computer Science & Engineering graduate from
+          <strong>American International University-Bangladesh (AIUB)</strong>
+          specializing in engineering production-grade
+          <strong>Artificial Intelligence & Machine Learning Systems</strong>,
+          scalable
+          <strong>Enterprise Web Applications (Django & React)</strong>, and
+          cross-platform <strong>Mobile Applications (Flutter)</strong>.
+          Experienced in bridging deep algorithmic models (TabNet, XGBoost, Deep
+          MLP) with high-throughput backend APIs, data pipelines, and responsive
+          user interfaces. Proven track record across 7+ production repositories
+          covering distributed systems, network diagnostic utilities, and 3D
+          graphics simulations.
+        </p>
+      </section>
+
+      <!-- TECHNICAL SKILLS -->
+      <section class="cv-section">
+        <h2 class="section-title">
+          <i class="fa-solid fa-code"></i> Technical Competencies
+        </h2>
+        <div class="skills-table">
+          <div class="skill-row">
+            <span class="skill-category">Programming Languages:</span>
+            <span class="skill-list"
+              >Python, C++, Java, Dart, JavaScript (ES6+), SQL (PostgreSQL,
+              SQLite), Bash / Shell</span
+            >
+          </div>
+          <div class="skill-row">
+            <span class="skill-category">AI, ML & Data Science:</span>
+            <span class="skill-list"
+              >PyTorch, TensorFlow, Scikit-Learn, TabNet, XGBoost, LightGBM,
+              Pandas, NumPy, OpenCV, Data Mining & ETL</span
+            >
+          </div>
+          <div class="skill-row">
+            <span class="skill-category">Web & Backend:</span>
+            <span class="skill-list"
+              >Django, Django REST Framework, FastAPI, React.js, Node.js,
+              RESTful Architecture, WebSockets, HTML5/CSS3</span
+            >
+          </div>
+          <div class="skill-row">
+            <span class="skill-category">Mobile & Graphics:</span>
+            <span class="skill-list"
+              >Flutter (iOS & Android), Dart, OpenGL 3.3+ (C++ Shaders, Phong
+              Lighting, 3D Rendering)</span
+            >
+          </div>
+          <div class="skill-row">
+            <span class="skill-category">Systems & DevOps:</span>
+            <span class="skill-list"
+              >Linux/Unix Administration, Socket Programming, Git/GitHub,
+              Docker, CI/CD, Cloudflare, Vercel</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- EDUCATION -->
+      <section class="cv-section">
+        <h2 class="section-title">
+          <i class="fa-solid fa-graduation-cap"></i> Education
+        </h2>
+        <div class="item-entry">
+          <div class="edu-card">
+            <div>
+              <span class="edu-degree"
+                >Bachelor of Science in Computer Science & Engineering (B.Sc CSE)</span
+              >
+              <div class="edu-specialization" style="color: var(--accent); font-weight: 600; font-size: 8.8pt; margin-top: 2px;">
+                Major in Information Systems • Minor in Computer Engineering
+              </div>
+              <div class="edu-school" style="margin-top: 2px;">
+                American International University-Bangladesh (AIUB)
+              </div>
+            </div>
+            <span class="item-date-loc">Dhaka, Bangladesh</span>
+          </div>
+          <div class="edu-details" style="margin-top: 4px;">
+            <strong>Academic Record:</strong> 54 Accredited Courses Completed •
+            <strong>142 Total Credits</strong> • Major: Information Systems • Minor: Computer Engineering • Student ID:
+            <code>22-46560-1</code>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURED PROJECTS & RESEARCH -->
+      <section class="cv-section">
+        <h2 class="section-title">
+          <i class="fa-solid fa-flask"></i> Featured Engineering & AI Projects
+        </h2>
+
+        <!-- Project 1: Smart Health Assistant -->
+        <div class="item-entry">
+          <div class="item-header">
+            <div class="item-title-group">
+              <span class="item-title"
+                >Smart Health Assistant & Clinical AI Triage</span
+              >
+              <span class="item-subtitle">— Undergraduate B.Sc Thesis</span>
+              <a
+                href="https://github.com/GolamRabbani09/Theses"
+                target="_blank"
+                class="item-link"
+                >[GitHub
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>]</a
+              >
+            </div>
+            <span class="item-date-loc">Python, PyTorch, TabNet, XGBoost</span>
+          </div>
+          <div class="item-tech-stack">
+            PyTorch • Google TabNet • Deep MLP • XGBoost • Scikit-Learn • 5-Fold
+            Stratified CV
+          </div>
+          <ul class="item-bullets">
+            <li>
+              Architected an end-to-end clinical decision support system
+              classifying multi-symptom inputs into differential disease
+              predictions across <strong>512 pathology categories</strong>.
+            </li>
+            <li>
+              Benchmarked 6 Machine Learning & Deep architectures:
+              <strong>TabNet (94.2% Top-3 Acc)</strong>,
+              <strong>Deep MLP (93.8% Acc)</strong>,
+              <strong>XGBoost (92.5% Acc)</strong>, and LightGBM with
+              comprehensive confusion matrix analysis.
+            </li>
+            <li>
+              Engineered an automated specialist routing engine mapping
+              predicted conditions to
+              <strong>296 verified medical practitioners</strong> based on
+              clinical departments and chamber locations.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Project 2: Enterprise Data Warehousing -->
+        <div class="item-entry">
+          <div class="item-header">
+            <div class="item-title-group">
+              <span class="item-title"
+                >Enterprise Data Warehouse & Mining Engine</span
+              >
+              <a
+                href="https://github.com/GolamRabbani09/DATA-WAREHOUSING-AND-DATA-MINING-"
+                target="_blank"
+                class="item-link"
+                >[GitHub
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>]</a
+              >
+            </div>
+            <span class="item-date-loc">Python, SQL, Scikit-Learn, OLAP</span>
+          </div>
+          <div class="item-tech-stack">
+            PostgreSQL • Star/Snowflake Schema • Apriori / FP-Growth • K-Means •
+            Decision Trees
+          </div>
+          <ul class="item-bullets">
+            <li>
+              Designed multidimensional dimensional schemas (Fact & Dimension
+              tables) and automated ETL pipelines for high-volume enterprise
+              sales and transaction datasets.
+            </li>
+            <li>
+              Implemented association rule mining algorithms (Apriori,
+              FP-Growth) and clustering models (K-Means, Hierarchical) to
+              extract actionable behavioral patterns and market baskets.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Project 3: SmartERP -->
+        <div class="item-entry">
+          <div class="item-header">
+            <div class="item-title-group">
+              <span class="item-title"
+                >SmartERP — Enterprise Resource Planning Architecture</span
+              >
+              <a
+                href="https://github.com/GolamRabbani09/SmartERP"
+                target="_blank"
+                class="item-link"
+                >[GitHub
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>]</a
+              >
+            </div>
+            <span class="item-date-loc"
+              >Django, Python, PostgreSQL, REST API</span
+            >
+          </div>
+          <div class="item-tech-stack">
+            Django • Django REST Framework • PostgreSQL • JWT Auth • RBAC •
+            Bootstrap 5
+          </div>
+          <ul class="item-bullets">
+            <li>
+              Developed a full-stack modular enterprise management system
+              featuring inventory tracking, automated payroll calculation,
+              vendor lifecycle management, and financial reporting.
+            </li>
+            <li>
+              Engineered secure token-based authentication and granular
+              Role-Based Access Control (RBAC) across administrative,
+              managerial, and operational employee tiers.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Project 4: Low-Level Network Scanner -->
+        <div class="item-entry">
+          <div class="item-header">
+            <div class="item-title-group">
+              <span class="item-title"
+                >Network_Scan — Asynchronous Security & Socket Tool</span
+              >
+              <a
+                href="https://github.com/GolamRabbani09/Network_Scan"
+                target="_blank"
+                class="item-link"
+                >[GitHub
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>]</a
+              >
+            </div>
+            <span class="item-date-loc"
+              >Python, C++, Socket API, Multithreading</span
+            >
+          </div>
+          <div class="item-tech-stack">
+            TCP/UDP Sockets • Raw Packet Sniffing • Concurrent Thread Pools •
+            Port Mapping
+          </div>
+          <ul class="item-bullets">
+            <li>
+              Constructed a high-speed multithreaded network vulnerability
+              auditing tool scanning 1,000+ ports per second with banner
+              grabbing, service fingerprinting, and packet analysis.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Project 5: 3D Graphics Simulation -->
+        <div class="item-entry">
+          <div class="item-header">
+            <div class="item-title-group">
+              <span class="item-title"
+                >Village-Scenario — OpenGL 3D Interactive Graphics
+                Simulation</span
+              >
+              <a
+                href="https://github.com/GolamRabbani09/Village-Scenario"
+                target="_blank"
+                class="item-link"
+                >[GitHub
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>]</a
+              >
+            </div>
+            <span class="item-date-loc">C++, Modern OpenGL (GLSL), GLFW</span>
+          </div>
+          <div class="item-tech-stack">
+            OpenGL 3.3+ • GLSL Shaders • Phong Lighting Model • Camera Physics •
+            Linear Algebra
+          </div>
+          <ul class="item-bullets">
+            <li>
+              Programmed a real-time 3D environment with custom vertex/fragment
+              GLSL shaders, ambient/diffuse/specular Phong illumination, texture
+              mapping, and 6-DOF camera controls.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Project 6: MilManement Mobile App -->
+        <div class="item-entry">
+          <div class="item-header">
+            <div class="item-title-group">
+              <span class="item-title"
+                >MilManement — Meal & Shared Budget Optimization App</span
+              >
+              <a
+                href="https://github.com/GolamRabbani09/MilManement"
+                target="_blank"
+                class="item-link"
+                >[GitHub
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>]</a
+              >
+            </div>
+            <span class="item-date-loc">Flutter, Dart, SQLite, Mobile</span>
+          </div>
+          <div class="item-tech-stack">
+            Flutter • Dart • Provider State Management • SQLite Local Cache •
+            REST Integration
+          </div>
+          <ul class="item-bullets">
+            <li>
+              Engineered a cross-platform mobile application for hostel/shared
+              living environments calculating daily meal rates, dynamic cost
+              distribution, and transparent ledger balancing.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ACADEMIC FOCUS & INTERESTS -->
+      <section class="cv-section">
+        <h2 class="section-title">
+          <i class="fa-solid fa-certificate"></i> Key Coursework & Focus Areas
+        </h2>
+        <p class="summary-text" style="font-size: 8.8pt">
+          <strong>Core Computer Science:</strong> Data Structures & Algorithms,
+          Object-Oriented Analysis & Design, Database Management Systems,
+          Operating Systems, Computer Networks, Software Engineering, Artificial
+          Intelligence, Machine Learning, Data Warehousing & Data Mining,
+          Computer Graphics, Theory of Computation.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

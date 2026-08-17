@@ -862,16 +862,32 @@ function initTerminalCLI() {
       <span class="text-accent">projects</span>    - List of key repositories and systems
       <span class="text-accent">thesis</span>      - Details on B.Sc Thesis (Smart Health Assistant)
       <span class="text-accent">grade</span>       - View official B.Sc Grade Report PDF
+      <span class="text-accent">cv</span>          - View full curriculum vitae (ATS formatted)
       <span class="text-accent">doctors</span>     - Open verified specialist directory
       <span class="text-accent">contact</span>     - Direct contact info and email
       <span class="text-accent">hire</span>        - Why Golam Rabbani is an asset to your engineering team
       <span class="text-accent">github</span>      - Link to GitHub profile (@GolamRabbani09)
       <span class="text-accent">clear</span>       - Clear terminal window
     `,
+    cv: `
+      <strong class="text-accent">Golam Rabbani — Curriculum Vitae (CV)</strong>
+      --------------------------------------------------
+      • Specialization: AI & Full-Stack Software Engineer (Major: Info Systems, Minor: Comp Eng)
+      • Education: B.Sc in CSE, AIUB (142 Credits Completed)
+      • View Online & Printable PDF: <a href="cv.html" class="link-highlight">Open Golam Rabbani CV Page (A4 Print Ready) ↗</a>
+    `,
+    resume: `
+      <strong class="text-accent">Golam Rabbani — Curriculum Vitae (CV)</strong>
+      --------------------------------------------------
+      • Specialization: AI & Full-Stack Software Engineer (Major: Info Systems, Minor: Comp Eng)
+      • Education: B.Sc in CSE, AIUB (142 Credits Completed)
+      • View Online & Printable PDF: <a href="cv.html" class="link-highlight">Open Golam Rabbani CV Page (A4 Print Ready) ↗</a>
+    `,
     about: `
       <strong class="text-accent">Golam Rabbani</strong> — AI & Full-Stack Software Engineer
       --------------------------------------------------
       • B.Sc in CSE graduate from American International University-Bangladesh (AIUB).
+      • Major in Information Systems | Minor in Computer Engineering.
       • Combines machine learning research (TabNet, XGBoost, MLP) with production full-stack engineering (Django, React, FastAPI, Flutter).
       • Proven builder of enterprise ERPs, clinical AI triage systems, 3D graphics engines, and cybersecurity scanners.
     `,
@@ -909,6 +925,7 @@ function initTerminalCLI() {
       --------------------------------------------------
       • Student Name: <strong>RABBANI, GOLAM</strong> (Student ID: 22-46560-1)
       • Degree: Bachelor of Science in Computer Science & Engineering
+      • Specialization: Major in Information Systems | Minor in Computer Engineering
       • Completed: 142 Credits | 54 Completed Courses
       • Official PDF: <a href="assets/docs/bsc_grade_report.pdf" target="_blank" class="link-highlight">Open Official B.Sc Grade Report PDF ↗</a>
     `,
@@ -917,6 +934,7 @@ function initTerminalCLI() {
       --------------------------------------------------
       • Student Name: <strong>RABBANI, GOLAM</strong> (Student ID: 22-46560-1)
       • Degree: Bachelor of Science in Computer Science & Engineering
+      • Specialization: Major in Information Systems | Minor in Computer Engineering
       • Completed: 142 Credits | 54 Completed Courses
       • Official PDF: <a href="assets/docs/bsc_grade_report.pdf" target="_blank" class="link-highlight">Open Official B.Sc Grade Report PDF ↗</a>
     `,

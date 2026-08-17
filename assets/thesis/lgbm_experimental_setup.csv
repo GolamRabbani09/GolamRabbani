@@ -1,0 +1,13 @@
+Setting,Value
+Total samples (raw),246945
+After dedup + rare-class filter,187850
+Diseases (classes),512
+Symptom features,377
+Train/Test split,85% / 15% (stratified)
+Rare-class threshold,< 20 samples removed
+Model,LightGBM (multiclass)
+n_estimators / early stopping,300 / patience=20
+learning_rate / num_leaves,0.1 / 63
+Best iteration,1
+Random seed,42
+Hardware,Google Colab (CPU)

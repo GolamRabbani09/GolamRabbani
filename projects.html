@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Featured Projects — Golam Rabbani (@GolamRabbani09) | GitHub Repositories</title>
+  <meta name="description" content="Explore verified engineering repositories, AI triage systems, full-stack ERPs, 3D graphics engines, and security scanners built by Golam Rabbani.">
+  <meta name="keywords" content="Golam Rabbani Projects, Smart Health Assistant, TabNet, Django, React, Flutter, Computer Vision, GolamRabbani09">
+  <meta name="author" content="Golam Rabbani">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://golamrabbani09.github.io/projects.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Featured Projects — Golam Rabbani (@GolamRabbani09)">
+  <meta property="og:description" content="7 verified engineering projects spanning AI/ML, Django Enterprise, Flutter, OpenGL 3D, and Cyber Utilities.">
+  <meta property="og:url" content="https://golamrabbani09.github.io/projects.html">
+  <meta property="og:image" content="assets/profile.jpg">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Particle Canvas & Cursor Glow -->
+  <canvas id="particle-canvas"></canvas>
+  <div class="cursor-glow" id="cursor-glow"></div>
+
+  <!-- Toast Notification System -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Universal Navigation Bar -->
+  <header class="navbar-wrapper" id="navbar">
+    <nav class="navbar-container">
+      <a href="index.html" class="nav-brand" title="Golam Rabbani — Home">
+        <div class="brand-monogram">GR</div>
+        <span class="brand-name">Golam<span class="brand-accent">Rabbani</span></span>
+      </a>
+
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-links">
+          <li><a href="about.html" class="nav-link"><i class="fa-solid fa-user-astronaut"></i> <span>About</span></a></li>
+          <li><a href="simulator.html" class="nav-link nav-link-special"><i class="fa-solid fa-microchip"></i> <span>AI Demo</span> <span class="nav-pill-badge">Live</span></a></li>
+          <li><a href="projects.html" class="nav-link active"><i class="fa-solid fa-code-branch"></i> <span>Projects</span></a></li>
+          <li><a href="skills.html" class="nav-link"><i class="fa-solid fa-layer-group"></i> <span>Skills</span></a></li>
+          <li><a href="research.html" class="nav-link"><i class="fa-solid fa-flask-vial"></i> <span>Research</span></a></li>
+          <li><a href="assets/docs/bsc_grade_report.pdf" target="_blank" rel="noopener noreferrer" class="nav-link nav-link-grade" title="Official AIUB Grade Report (PDF)"><i class="fa-solid fa-graduation-cap"></i> <span>B.Sc Grade</span> <span class="nav-tag-badge">PDF</span></a></li>
+          <li><a href="terminal.html" class="nav-link"><i class="fa-solid fa-terminal"></i> <span>Terminal</span></a></li>
+          <li><a href="contact.html" class="nav-link"><i class="fa-solid fa-paper-plane"></i> <span>Contact</span></a></li>
+        </ul>
+      </div>
+
+      <div class="nav-actions">
+        <a href="https://github.com/GolamRabbani09" target="_blank" rel="noopener noreferrer" class="btn btn-icon" title="GitHub Profile">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="contact.html" class="btn btn-primary btn-sm nav-cta-btn">
+          <span>Let's Talk</span>
+          <i class="fa-solid fa-arrow-right-long"></i>
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    
+    <!-- PAGE HERO SECTION -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero-content" data-reveal>
+          <div class="page-hero-badge">
+            <span class="status-pulse"></span>
+            <span>AUTHENTIC GITHUB REPOSITORIES (@GolamRabbani09)</span>
+          </div>
+          <h1 class="page-hero-title">
+            Featured <span class="highlight-name">Engineering Projects</span>
+          </h1>
+          <p class="page-hero-desc">
+            Explore flagship machine learning architectures, enterprise management suites, data mining pipelines, OpenGL 3D graphics engines, and cybersecurity utilities. Every project is backed by authentic, publicly accessible codebases.
+          </p>
+        </div>
+
+        <!-- Project Filter Tabs -->
+        <div class="project-filters" data-reveal style="margin-top: 2rem;">
+          <button class="filter-btn active" data-filter="all">All Projects (7)</button>
+          <button class="filter-btn" data-filter="ai-ml">AI, ML & Data Mining</button>
+          <button class="filter-btn" data-filter="full-stack">Full-Stack & Web</button>
+          <button class="filter-btn" data-filter="graphics-systems">3D Graphics & Systems</button>
+          <button class="filter-btn" data-filter="cyber-tools">Cybersecurity & Tools</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS GRID SECTION -->
+    <section class="section-padding" style="padding-top: 1rem; padding-bottom: 5rem;">
+      <div class="container">
+        <div class="projects-grid" id="projects-grid">
+          
+          <!-- PROJECT 1: Smart Health Assistant (B.Sc Thesis Flagship) -->
+          <div class="project-card featured" data-category="ai-ml full-stack" data-reveal>
+            <div class="project-card-banner">
+              <span class="badge-flagship"><i class="fa-solid fa-award"></i> B.Sc Thesis Flagship</span>
+              <span class="badge-lang">Python • PyTorch • Flutter</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-icon-title">
+                <div class="project-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                <div>
+                  <h3 class="project-title">Smart Health Assistant & Specialist Referral</h3>
+                  <span class="project-role">End-to-End AI Triage System & Mobile App</span>
+                </div>
+              </div>
+              <p class="project-desc">
+                An intelligent multi-disease diagnostic assistant trained on <strong>200,000+ records</strong> across 512 disease classes. Features TabNet, XGBoost, and Dense MLP comparative benchmarking, deployed with a <strong>FastAPI</strong> backend and a <strong>Flutter</strong> mobile app with automated specialist directory routing.
+              </p>
+              
+              <div class="project-metrics">
+                <div class="metric"><strong class="highlight-green">94.81%</strong><span>Top-3 Accuracy</span></div>
+                <div class="metric"><strong>512</strong><span>Disease Classes</span></div>
+                <div class="metric"><strong>5-Fold</strong><span>Cross-Validated</span></div>
+              </div>
+
+              <div class="tech-stack-tags">
+                <span>FastAPI</span>
+                <span>Flutter</span>
+                <span>PyTorch (TabNet)</span>
+                <span>XGBoost</span>
+                <span>Scikit-Learn</span>
+                <span>SQLite</span>
+                <span>Render</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/GolamRabbani09/Theses" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                <i class="fa-brands fa-github"></i> Source Code
+              </a>
+              <a href="simulator.html" class="btn btn-sm btn-primary">
+                <i class="fa-solid fa-play"></i> Launch Live Simulator
+              </a>
+            </div>
+          </div>
+
+          <!-- PROJECT 2: DATA-WAREHOUSING-AND-DATA-MINING- -->
+          <div class="project-card" data-category="ai-ml" data-reveal>
+            <div class="project-card-banner">
+              <span class="badge-status"><i class="fa-solid fa-chart-pie"></i> Data Warehousing & Mining</span>
+              <span class="badge-lang">Python • SQL • Scikit-Learn</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-icon-title">
+                <div class="project-icon"><i class="fa-solid fa-database"></i></div>
+                <div>
+                  <h3 class="project-title">DATA-WAREHOUSING-AND-DATA-MINING-</h3>
+                  <span class="project-role">ETL Pipelines, OLAP Schemas & Pattern Mining</span>
+                </div>
+              </div>
+              <p class="project-desc">
+                Comprehensive data warehousing and data mining framework. Implements multi-dimensional star & snowflake schemas, ETL data processing pipelines, OLAP analytics, association rule mining (Apriori), decision trees, k-means clustering, and predictive classification models on enterprise datasets.
+              </p>
+              
+              <div class="project-metrics">
+                <div class="metric"><strong>ETL & OLAP</strong><span>Cube Schemas</span></div>
+                <div class="metric"><strong>Pattern</strong><span>Data Mining</span></div>
+                <div class="metric"><strong>Clustering</strong><span>& Classification</span></div>
+              </div>
+
+              <div class="tech-stack-tags">
+                <span>Data Warehousing</span>
+                <span>Data Mining</span>
+                <span>Python</span>
+                <span>SQL / ETL</span>
+                <span>Scikit-Learn</span>
+                <span>Pandas / NumPy</span>
+                <span>OLAP</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/GolamRabbani09/DATA-WAREHOUSING-AND-DATA-MINING-" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                <i class="fa-brands fa-github"></i> View Repository
+              </a>
+            </div>
+          </div>
+
+          <!-- PROJECT 3: SmartERP -->
+          <div class="project-card" data-category="full-stack" data-reveal>
+            <div class="project-card-banner">
+              <span class="badge-status"><i class="fa-solid fa-building"></i> Enterprise System</span>
+              <span class="badge-lang">Django • React • JS</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-icon-title">
+                <div class="project-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+                <div>
+                  <h3 class="project-title">SmartERP — Enterprise & E-Commerce</h3>
+                  <span class="project-role">Full-Stack Enterprise Web Application</span>
+                </div>
+              </div>
+              <p class="project-desc">
+                A robust, multi-tier Enterprise Resource Planning (ERP) and e-commerce platform built with <strong>Django REST Framework</strong> and <strong>React</strong>. Features inventory tracking, automated billing, role-based authorization, and real-time sales reporting.
+              </p>
+              
+              <div class="project-metrics">
+                <div class="metric"><strong>Multi-Tenant</strong><span>Architecture</span></div>
+                <div class="metric"><strong>RESTful</strong><span>API Endpoints</span></div>
+                <div class="metric"><strong>Role-Based</strong><span>Auth & RBAC</span></div>
+              </div>
+
+              <div class="tech-stack-tags">
+                <span>Django</span>
+                <span>React.js</span>
+                <span>Python</span>
+                <span>JavaScript</span>
+                <span>PostgreSQL</span>
+                <span>REST API</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/GolamRabbani09/SmartERP" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                <i class="fa-brands fa-github"></i> View Repository
+              </a>
+            </div>
+          </div>
+
+          <!-- PROJECT 4: 3D Village Scenario -->
+          <div class="project-card" data-category="graphics-systems" data-reveal>
+            <div class="project-card-banner">
+              <span class="badge-status"><i class="fa-solid fa-cube"></i> 3D Engine</span>
+              <span class="badge-lang">C++ • OpenGL</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-icon-title">
+                <div class="project-icon"><i class="fa-solid fa-mountain-sun"></i></div>
+                <div>
+                  <h3 class="project-title">3D Village & Environment Engine</h3>
+                  <span class="project-role">OpenGL Real-time Computer Graphics</span>
+                </div>
+              </div>
+              <p class="project-desc">
+                Interactive 3D simulation environment built with <strong>C++ and OpenGL</strong>. Implements real-time lighting calculations, volumetric day-and-night cycles, procedural cloud movement, terrain modeling, and interactive camera perspective navigation.
+              </p>
+              
+              <div class="project-metrics">
+                <div class="metric"><strong>60 FPS</strong><span>Real-Time</span></div>
+                <div class="metric"><strong>Dynamic</strong><span>Day/Night Lighting</span></div>
+                <div class="metric"><strong>GLSL</strong><span>Shaders</span></div>
+              </div>
+
+              <div class="tech-stack-tags">
+                <span>C++</span>
+                <span>OpenGL</span>
+                <span>GLSL Shaders</span>
+                <span>3D Rendering</span>
+                <span>Computer Graphics</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/GolamRabbani09/Village-Scenario" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                <i class="fa-brands fa-github"></i> View Repository
+              </a>
+            </div>
+          </div>
+
+          <!-- PROJECT 5: Network_Scan -->
+          <div class="project-card" data-category="cyber-tools" data-reveal>
+            <div class="project-card-banner">
+              <span class="badge-status"><i class="fa-solid fa-shield"></i> Security Tool</span>
+              <span class="badge-lang">Python • Sockets</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-icon-title">
+                <div class="project-icon"><i class="fa-solid fa-network-wired"></i></div>
+                <div>
+                  <h3 class="project-title">NetworkScan — Port & Vulnerability Auditor</h3>
+                  <span class="project-role">Asynchronous Cyber Security Utility</span>
+                </div>
+              </div>
+              <p class="project-desc">
+                High-speed multithreaded network scanning utility developed in Python. Discovers active subnet hosts, maps open TCP/UDP ports, detects active network services, and outputs security audit summaries.
+              </p>
+              
+              <div class="project-metrics">
+                <div class="metric"><strong>Multithreaded</strong><span>Socket Engine</span></div>
+                <div class="metric"><strong>Subnet</strong><span>Host Discovery</span></div>
+                <div class="metric"><strong>Security</strong><span>Port Auditing</span></div>
+              </div>
+
+              <div class="tech-stack-tags">
+                <span>Python</span>
+                <span>Raw Sockets</span>
+                <span>Multithreading</span>
+                <span>Network Security</span>
+                <span>Port Auditing</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/GolamRabbani09/Network_Scan" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                <i class="fa-brands fa-github"></i> View Repository
+              </a>
+            </div>
+          </div>
+
+          <!-- PROJECT 6: CVPR Computer Vision Suite -->
+          <div class="project-card" data-category="ai-ml" data-reveal>
+            <div class="project-card-banner">
+              <span class="badge-status"><i class="fa-solid fa-eye"></i> Computer Vision</span>
+              <span class="badge-lang">OpenCV • Python</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-icon-title">
+                <div class="project-icon"><i class="fa-solid fa-camera-retro"></i></div>
+                <div>
+                  <h3 class="project-title">CVPR — Computer Vision & Pattern Recognition</h3>
+                  <span class="project-role">Image Processing & Feature Extraction</span>
+                </div>
+              </div>
+              <p class="project-desc">
+                Comprehensive collection of computer vision pipelines, including edge detection algorithms (Sobel, Canny), morphological transformations, feature extraction, and image classification models.
+              </p>
+              
+              <div class="project-metrics">
+                <div class="metric"><strong>OpenCV</strong><span>Pipelines</span></div>
+                <div class="metric"><strong>Spatial</strong><span>Filtering</span></div>
+                <div class="metric"><strong>Pattern</strong><span>Classifiers</span></div>
+              </div>
+
+              <div class="tech-stack-tags">
+                <span>Python</span>
+                <span>OpenCV</span>
+                <span>NumPy</span>
+                <span>Jupyter Notebook</span>
+                <span>Pattern Recognition</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/GolamRabbani09/CVPR" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                <i class="fa-brands fa-github"></i> View Repository
+              </a>
+            </div>
+          </div>
+
+          <!-- PROJECT 7: Meal Management Automation -->
+          <div class="project-card" data-category="full-stack cyber-tools" data-reveal>
+            <div class="project-card-banner">
+              <span class="badge-status"><i class="fa-solid fa-calculator"></i> Management App</span>
+              <span class="badge-lang">JavaScript • Web</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-icon-title">
+                <div class="project-icon"><i class="fa-solid fa-utensils"></i></div>
+                <div>
+                  <h3 class="project-title">MilManagement — Hostel & Meal Accounting</h3>
+                  <span class="project-role">Financial & Resource Tracking System</span>
+                </div>
+              </div>
+              <p class="project-desc">
+                Dynamic automated meal rate calculation and accounting platform designed for community hostels. Automates monthly expense balancing, daily attendance logging, and generates instant budget breakdowns.
+              </p>
+              
+              <div class="project-metrics">
+                <div class="metric"><strong>Automated</strong><span>Ledger Engine</span></div>
+                <div class="metric"><strong>Real-Time</strong><span>Cost Splitting</span></div>
+                <div class="metric"><strong>Dynamic</strong><span>DOM Interface</span></div>
+              </div>
+
+              <div class="tech-stack-tags">
+                <span>JavaScript</span>
+                <span>HTML5 / CSS3</span>
+                <span>Database</span>
+                <span>Accounting Logic</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/GolamRabbani09/MilManement" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                <i class="fa-brands fa-github"></i> View Repository
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Universal High-End Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Column 1: Brand & Philosophy -->
+        <div class="footer-col footer-brand-col">
+          <a href="index.html" class="nav-brand">
+            <div class="brand-monogram">GR</div>
+            <span class="brand-name">Golam<span class="brand-accent">Rabbani</span></span>
+          </a>
+          <p>
+            Computer Science BSc Graduate from AIUB specializing in building end-to-end AI Machine Learning Systems, Enterprise Web Applications, and Cross-Platform Mobile Apps.
+          </p>
+          <a href="mailto:golamrabbani.dev0@gmail.com" class="footer-email-chip">
+            <span class="status-pulse" style="width: 6px; height: 6px;"></span>
+            <span>golamrabbani.dev0@gmail.com</span>
+          </a>
+        </div>
+
+        <!-- Column 2: Navigation Routes -->
+        <div class="footer-col">
+          <h4><i class="fa-solid fa-compass"></i> Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html"><i class="fa-solid fa-house-chimney"></i> Home</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-user-astronaut"></i> About</a></li>
+            <li><a href="simulator.html"><i class="fa-solid fa-microchip text-accent"></i> Live AI Demo</a></li>
+            <li><a href="projects.html"><i class="fa-solid fa-code-branch"></i> Projects</a></li>
+            <li><a href="skills.html"><i class="fa-solid fa-layer-group"></i> Skills</a></li>
+            <li><a href="research.html"><i class="fa-solid fa-flask-vial"></i> Research</a></li>
+            <li><a href="terminal.html"><i class="fa-solid fa-terminal"></i> Terminal</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-paper-plane"></i> Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Academic Credentials & Connect -->
+        <div class="footer-col">
+          <h4><i class="fa-solid fa-graduation-cap"></i> Academic & Connect</h4>
+          <div class="footer-academic-card">
+            <h5>AIUB — CSE Department</h5>
+            <p>142 Credits Completed • Student ID: 22-46560-1</p>
+          </div>
+          <div class="footer-quick-btns">
+            <a href="assets/docs/bsc_grade_report.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline" title="Official Grade Report">
+              <i class="fa-solid fa-file-pdf text-accent"></i> B.Sc Grade Report
+            </a>
+            <a href="https://github.com/GolamRabbani09" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline" title="GitHub">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Golam Rabbani. Crafted with precision & clean code.</p>
+        <button id="back-to-top" class="back-to-top-btn" title="Back to top" aria-label="Back to top">
+          <i class="fa-solid fa-arrow-up"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

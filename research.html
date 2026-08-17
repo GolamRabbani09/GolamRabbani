@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Undergraduate Research & Thesis — Golam Rabbani | Smart Health Assistant AI</title>
+  <meta name="description" content="Design of a Machine Learning-Based Smart Health Assistant for Early Diagnosis and Specialist Mapping. B.Sc Thesis by Golam Rabbani (AIUB CSE).">
+  <meta name="keywords" content="Golam Rabbani Thesis, Smart Health Assistant, AIUB Research, TabNet, XGBoost, LightGBM, Disease Prediction, Syeda Anika Tasnim">
+  <meta name="author" content="Golam Rabbani">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://golamrabbani09.github.io/research.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Undergraduate Research & Thesis — Golam Rabbani (AIUB)">
+  <meta property="og:description" content="Empirical evaluation of 6 AI architectures over 187K+ clinical records achieving 94.8% Top-3 diagnostic accuracy.">
+  <meta property="og:url" content="https://golamrabbani09.github.io/research.html">
+  <meta property="og:image" content="assets/thesis/tabnet_folds.png">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Particle Canvas & Cursor Glow -->
+  <canvas id="particle-canvas"></canvas>
+  <div class="cursor-glow" id="cursor-glow"></div>
+
+  <!-- Toast Notification System -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Universal Navigation Bar -->
+  <header class="navbar-wrapper" id="navbar">
+    <nav class="navbar-container">
+      <a href="index.html" class="nav-brand" title="Golam Rabbani — Home">
+        <div class="brand-monogram">GR</div>
+        <span class="brand-name">Golam<span class="brand-accent">Rabbani</span></span>
+      </a>
+
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-links">
+          <li><a href="about.html" class="nav-link"><i class="fa-solid fa-user-astronaut"></i> <span>About</span></a></li>
+          <li><a href="simulator.html" class="nav-link nav-link-special"><i class="fa-solid fa-microchip"></i> <span>AI Demo</span> <span class="nav-pill-badge">Live</span></a></li>
+          <li><a href="projects.html" class="nav-link"><i class="fa-solid fa-code-branch"></i> <span>Projects</span></a></li>
+          <li><a href="skills.html" class="nav-link"><i class="fa-solid fa-layer-group"></i> <span>Skills</span></a></li>
+          <li><a href="research.html" class="nav-link active"><i class="fa-solid fa-flask-vial"></i> <span>Research</span></a></li>
+          <li><a href="assets/docs/bsc_grade_report.pdf" target="_blank" rel="noopener noreferrer" class="nav-link nav-link-grade" title="Official AIUB Grade Report (PDF)"><i class="fa-solid fa-graduation-cap"></i> <span>B.Sc Grade</span> <span class="nav-tag-badge">PDF</span></a></li>
+          <li><a href="terminal.html" class="nav-link"><i class="fa-solid fa-terminal"></i> <span>Terminal</span></a></li>
+          <li><a href="contact.html" class="nav-link"><i class="fa-solid fa-paper-plane"></i> <span>Contact</span></a></li>
+        </ul>
+      </div>
+
+      <div class="nav-actions">
+        <a href="https://github.com/GolamRabbani09" target="_blank" rel="noopener noreferrer" class="btn btn-icon" title="GitHub Profile">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="contact.html" class="btn btn-primary btn-sm nav-cta-btn">
+          <span>Let's Talk</span>
+          <i class="fa-solid fa-arrow-right-long"></i>
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    
+    <!-- PAGE HERO SECTION -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero-content" data-reveal>
+          <div class="page-hero-badge">
+            <span class="status-pulse"></span>
+            <span>SCIENTIFIC CONTRIBUTIONS & THESIS BENCHMARKS</span>
+          </div>
+          <h1 class="page-hero-title">
+            Undergraduate <span class="highlight-name">Research & Thesis</span>
+          </h1>
+          <p class="page-hero-desc">
+            <strong>Title:</strong> Design of a Machine Learning-Based Smart Health Assistant for Early Diagnosis and Specialist Mapping.<br>
+            <strong>Supervisor:</strong> Syeda Anika Tasnim, Department of Computer Science & Engineering, American International University-Bangladesh (AIUB).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- THESIS SHOWCASE SECTION -->
+    <section class="section-padding" style="padding-top: 1rem; padding-bottom: 5rem;">
+      <div class="container">
+        
+        <div class="research-showcase-card" data-reveal>
+          <div class="research-header-row">
+            <div>
+              <span class="research-tag">AIUB BSc CSE THESIS • EMPIRICAL EVALUATION</span>
+              <h3 class="research-heading">Comparative Benchmark of 6 Tabular Machine Learning Architectures on 200,000+ Multi-Disease Records</h3>
+            </div>
+            <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+              <a href="https://github.com/GolamRabbani09/Theses" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                <i class="fa-brands fa-github"></i> View Thesis Repo
+              </a>
+              <a href="simulator.html" class="btn btn-sm btn-primary">
+                <i class="fa-solid fa-play"></i> Launch Live Simulator
+              </a>
+            </div>
+          </div>
+
+          <div class="research-grid">
+            <div class="research-block">
+              <h4><i class="fa-solid fa-database text-accent"></i> Master Dataset Engineering</h4>
+              <p>Standardized and combined 4 disparate open-source medical datasets into an internally consistent master repository. Implemented strict rare-class exclusion rules to handle multi-label class imbalance across 512 disease categories.</p>
+            </div>
+
+            <div class="research-block">
+              <h4><i class="fa-solid fa-chart-column text-accent"></i> 6-Model Benchmark</h4>
+              <p>Trained and compared <strong>TabNet (PyTorch)</strong>, <strong>Dense MLP (Keras)</strong>, <strong>XGBoost</strong>, <strong>LightGBM</strong>, <strong>Logistic Regression</strong>, and <strong>Random Forest</strong> using 5-Fold Stratified Cross-Validation.</p>
+            </div>
+
+            <div class="research-block">
+              <h4><i class="fa-solid fa-crosshairs text-accent"></i> Top-1 & Top-3 Diagnostic Accuracy</h4>
+              <p>Evaluated shortlist-aware accuracy. <strong>Multilayer Perceptron (MLP)</strong> achieved <strong>83.01% Top-1</strong> and <strong>94.81% Top-3</strong> accuracy, closely followed by <strong>TabNet (81.57% / 93.99%)</strong> and <strong>XGBoost (80.17% / 93.58%)</strong>.</p>
+            </div>
+
+            <div class="research-block">
+              <h4><i class="fa-solid fa-mobile-screen-button text-accent"></i> Deployment Optimization</h4>
+              <p>Selected and serialized regularized Logistic Regression (~91.10% Top-3 on Master set) for sub-20ms low-latency mobile inference over FastAPI backend, connecting 296+ specialist doctors to patients without heavy server overhead.</p>
+            </div>
+          </div>
+
+          <!-- Comparative Model Table -->
+          <div class="research-table-wrapper">
+            <h4 class="table-title"><i class="fa-solid fa-table-list text-accent"></i> Large Dataset 5-Fold Cross-Validation Performance Summary</h4>
+            <div class="table-responsive">
+              <table class="benchmark-table">
+                <thead>
+                  <tr>
+                    <th>Model Architecture</th>
+                    <th>Framework</th>
+                    <th>CV Top-1 Accuracy</th>
+                    <th>CV Top-3 Accuracy</th>
+                    <th>Deployment Suitability</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="highlight-row">
+                    <td><strong>Multilayer Perceptron (MLP)</strong></td>
+                    <td>Keras / T4 GPU</td>
+                    <td><strong>83.01% &plusmn; 0.23%</strong></td>
+                    <td><strong>94.81% &plusmn; 0.06%</strong></td>
+                    <td><span class="status-tag high">High Precision / Research</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>TabNet (Attention-based)</strong></td>
+                    <td>PyTorch / GPU</td>
+                    <td><strong>81.57% &plusmn; 0.31%</strong></td>
+                    <td><strong>93.99% &plusmn; 0.10%</strong></td>
+                    <td><span class="status-tag high">Interpretable Attention</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>XGBoost</strong></td>
+                    <td>XGBoost / GPU</td>
+                    <td>80.17% &plusmn; 0.13%</td>
+                    <td>93.58% &plusmn; 0.08%</td>
+                    <td><span class="status-tag medium">Tree Ensemble</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>LightGBM</strong></td>
+                    <td>LightGBM / CPU</td>
+                    <td>64.63% &plusmn; 0.20%</td>
+                    <td>88.54% &plusmn; 0.12%</td>
+                    <td><span class="status-tag low">Baseline</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Interactive Artifact Visualization Tabs -->
+          <div class="thesis-artifacts-wrapper">
+            <div class="artifacts-header">
+              <h4><i class="fa-solid fa-chart-area text-accent"></i> Authentic Empirical Experimental Visualizations</h4>
+              <div class="artifact-tabs" id="artifact-tabs">
+                <button class="tab-btn active" data-tab="tab-tabnet">TabNet Architecture</button>
+                <button class="tab-btn" data-tab="tab-mlp">Dense MLP Keras</button>
+                <button class="tab-btn" data-tab="tab-xgb">XGBoost</button>
+                <button class="tab-btn" data-tab="tab-lgbm">LightGBM</button>
+              </div>
+            </div>
+
+            <!-- TabNet Panel -->
+            <div class="artifact-panel active" id="tab-tabnet">
+              <div class="artifact-image-grid">
+                <div class="artifact-image-card">
+                  <div class="card-meta"><span>5-Fold Stratified Loss & Accuracy Learning Curves</span><i class="fa-solid fa-chart-line"></i></div>
+                  <img src="assets/thesis/tabnet_folds.png" alt="TabNet 5-Fold Curves" class="artifact-img">
+                </div>
+                <div class="artifact-image-card">
+                  <div class="card-meta"><span>Normalized Confusion Matrix Across 512 Classes (Top-15)</span><i class="fa-solid fa-table-cells-large"></i></div>
+                  <img src="assets/thesis/tabnet_confusion_matrix.png" alt="TabNet Confusion Matrix" class="artifact-img">
+                </div>
+              </div>
+            </div>
+
+            <!-- MLP Panel -->
+            <div class="artifact-panel" id="tab-mlp">
+              <div class="artifact-details-box">
+                <div class="mlp-spec-card">
+                  <h5><i class="fa-solid fa-network-wired text-accent"></i> Deep MLP Training Hyperparameters (T4 GPU)</h5>
+                  <ul class="spec-list">
+                    <li><i class="fa-solid fa-microchip text-accent"></i> <strong>Layer Stack:</strong> 512 &rarr; 256 &rarr; 128 (Dense + BatchNorm)</li>
+                    <li><i class="fa-solid fa-filter text-accent"></i> <strong>Dropout Regularization:</strong> 0.35 / 0.30 / 0.20</li>
+                    <li><i class="fa-solid fa-bolt text-accent"></i> <strong>Optimizer & LR:</strong> Adam (lr = 1e-3, batch size = 1024)</li>
+                    <li><i class="fa-solid fa-check-double text-accent"></i> <strong>Top-1 CV Accuracy:</strong> 83.01% &plusmn; 0.23%</li>
+                    <li><i class="fa-solid fa-award text-accent"></i> <strong>Top-3 CV Accuracy:</strong> 94.81% &plusmn; 0.06% (Highest in Benchmark)</li>
+                    <li><i class="fa-solid fa-database text-accent"></i> <strong>Corpus Size:</strong> 187,850 Cleaned Records (512 Classes)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- XGBoost Panel -->
+            <div class="artifact-panel" id="tab-xgb">
+              <div class="artifact-image-grid">
+                <div class="artifact-image-card">
+                  <div class="card-meta"><span>XGBoost Multi-class Log-Loss Convergence</span><i class="fa-solid fa-chart-line"></i></div>
+                  <img src="assets/thesis/xgb_convergence.png" alt="XGBoost Convergence" class="artifact-img">
+                </div>
+                <div class="artifact-image-card">
+                  <div class="card-meta"><span>XGBoost Normalized Confusion Matrix (Top-15)</span><i class="fa-solid fa-table-cells-large"></i></div>
+                  <img src="assets/thesis/xgb_confusion_matrix.png" alt="XGBoost Confusion Matrix" class="artifact-img">
+                </div>
+              </div>
+            </div>
+
+            <!-- LightGBM Panel -->
+            <div class="artifact-panel" id="tab-lgbm">
+              <div class="artifact-image-grid">
+                <div class="artifact-image-card">
+                  <div class="card-meta"><span>LightGBM Training vs Validation Log-Loss</span><i class="fa-solid fa-chart-line"></i></div>
+                  <img src="assets/thesis/lgbm_convergence.png" alt="LightGBM Convergence" class="artifact-img">
+                </div>
+                <div class="artifact-image-card">
+                  <div class="card-meta"><span>LightGBM Normalized Confusion Matrix</span><i class="fa-solid fa-table-cells-large"></i></div>
+                  <img src="assets/thesis/lgbm_confusion_matrix.png" alt="LightGBM Confusion Matrix" class="artifact-img">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Universal High-End Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Column 1: Brand & Philosophy -->
+        <div class="footer-col footer-brand-col">
+          <a href="index.html" class="nav-brand">
+            <div class="brand-monogram">GR</div>
+            <span class="brand-name">Golam<span class="brand-accent">Rabbani</span></span>
+          </a>
+          <p>
+            Computer Science BSc Graduate from AIUB specializing in building end-to-end AI Machine Learning Systems, Enterprise Web Applications, and Cross-Platform Mobile Apps.
+          </p>
+          <a href="mailto:golamrabbani.dev0@gmail.com" class="footer-email-chip">
+            <span class="status-pulse" style="width: 6px; height: 6px;"></span>
+            <span>golamrabbani.dev0@gmail.com</span>
+          </a>
+        </div>
+
+        <!-- Column 2: Navigation Routes -->
+        <div class="footer-col">
+          <h4><i class="fa-solid fa-compass"></i> Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html"><i class="fa-solid fa-house-chimney"></i> Home</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-user-astronaut"></i> About</a></li>
+            <li><a href="simulator.html"><i class="fa-solid fa-microchip text-accent"></i> Live AI Demo</a></li>
+            <li><a href="projects.html"><i class="fa-solid fa-code-branch"></i> Projects</a></li>
+            <li><a href="skills.html"><i class="fa-solid fa-layer-group"></i> Skills</a></li>
+            <li><a href="research.html"><i class="fa-solid fa-flask-vial"></i> Research</a></li>
+            <li><a href="terminal.html"><i class="fa-solid fa-terminal"></i> Terminal</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-paper-plane"></i> Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Academic Credentials & Connect -->
+        <div class="footer-col">
+          <h4><i class="fa-solid fa-graduation-cap"></i> Academic & Connect</h4>
+          <div class="footer-academic-card">
+            <h5>AIUB — CSE Department</h5>
+            <p>142 Credits Completed • Student ID: 22-46560-1</p>
+          </div>
+          <div class="footer-quick-btns">
+            <a href="assets/docs/bsc_grade_report.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline" title="Official Grade Report">
+              <i class="fa-solid fa-file-pdf text-accent"></i> B.Sc Grade Report
+            </a>
+            <a href="https://github.com/GolamRabbani09" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline" title="GitHub">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Golam Rabbani. Crafted with precision & clean code.</p>
+        <button id="back-to-top" class="back-to-top-btn" title="Back to top" aria-label="Back to top">
+          <i class="fa-solid fa-arrow-up"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

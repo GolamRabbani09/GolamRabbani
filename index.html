@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>Golam Rabbani — AI & Full-Stack Software Engineer | Portfolio</title>
+  <meta name="title" content="Golam Rabbani — AI & Full-Stack Software Engineer | Portfolio">
+  <meta name="description" content="Official portfolio of Golam Rabbani — B.Sc CSE Graduate from AIUB specializing in AI & Machine Learning Systems, Enterprise Web Apps (Django/React), Flutter mobile engineering, and Data Science.">
+  <meta name="keywords" content="Golam Rabbani, GolamRabbani09, AI Engineer, Machine Learning, Data Science, Data Analysis, Full-Stack Developer, Flutter, Django, React, FastAPI, TabNet, AIUB CSE">
+  <meta name="author" content="Golam Rabbani">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://golamrabbani09.github.io/">
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://golamrabbani09.github.io/">
+  <meta property="og:site_name" content="Golam Rabbani Portfolio">
+  <meta property="og:title" content="Golam Rabbani — AI & Full-Stack Software Engineer">
+  <meta property="og:description" content="Explore end-to-end Machine Learning systems, enterprise ERPs, and interactive cross-platform applications built by Golam Rabbani (AIUB CSE).">
+  <meta property="og:image" content="assets/profile.jpg">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Golam Rabbani — AI & Full-Stack Software Engineer">
+  <meta name="twitter:description" content="AI & Full-Stack Engineer specializing in TabNet ML systems, Django/React, Flutter, and Computer Graphics.">
+  <meta name="twitter:image" content="assets/profile.jpg">
+
+  <!-- JSON-LD Structured Data (Schema.org) for Google Search Engine -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Golam Rabbani",
+    "url": "https://golamrabbani09.github.io/",
+    "image": "https://golamrabbani09.github.io/assets/profile.jpg",
+    "email": "golamrabbani.dev0@gmail.com",
+    "sameAs": [
+      "https://github.com/GolamRabbani09"
+    ],
+    "jobTitle": "AI & Full-Stack Software Engineer",
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "American International University-Bangladesh (AIUB)",
+      "department": "Computer Science and Engineering"
+    },
+    "knowsAbout": [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Deep Learning",
+      "Data Science",
+      "Data Analysis",
+      "TabNet",
+      "PyTorch",
+      "Django",
+      "React",
+      "Flutter",
+      "OpenGL"
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark text-light antialiased">
+  
+  <!-- Interactive Background Canvas -->
+  <canvas id="ambient-canvas" class="ambient-canvas"></canvas>
+
+  <!-- Cursor Glow Effect -->
+  <div class="cursor-glow" id="cursor-glow"></div>
+
+  <!-- Toast Notification System -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar-wrapper" id="navbar">
+    <nav class="navbar-container">
+      <a href="#hero" class="nav-brand" title="Golam Rabbani — Home">
+        <div class="brand-monogram">GR</div>
+        <span class="brand-name">Golam<span class="brand-accent">Rabbani</span></span>
+      </a>
+
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-links">
+          <li><a href="about.html" class="nav-link"><i class="fa-solid fa-user-astronaut"></i> <span>About</span></a></li>
+          <li><a href="simulator.html" class="nav-link nav-link-special"><i class="fa-solid fa-microchip"></i> <span>AI Demo</span> <span class="nav-pill-badge">Live</span></a></li>
+          <li><a href="projects.html" class="nav-link"><i class="fa-solid fa-code-branch"></i> <span>Projects</span></a></li>
+          <li><a href="skills.html" class="nav-link"><i class="fa-solid fa-layer-group"></i> <span>Skills</span></a></li>
+          <li><a href="research.html" class="nav-link"><i class="fa-solid fa-flask-vial"></i> <span>Research</span></a></li>
+          <li><a href="assets/docs/bsc_grade_report.pdf" target="_blank" rel="noopener noreferrer" class="nav-link nav-link-grade" title="Official AIUB Grade Report (PDF)"><i class="fa-solid fa-graduation-cap"></i> <span>B.Sc Grade</span> <span class="nav-tag-badge">PDF</span></a></li>
+          <li><a href="terminal.html" class="nav-link"><i class="fa-solid fa-terminal"></i> <span>Terminal</span></a></li>
+          <li><a href="contact.html" class="nav-link"><i class="fa-solid fa-paper-plane"></i> <span>Contact</span></a></li>
+        </ul>
+      </div>
+
+      <div class="nav-actions">
+        <a href="https://github.com/GolamRabbani09" target="_blank" rel="noopener noreferrer" class="btn btn-icon" title="GitHub Profile">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="#contact" class="btn btn-primary btn-sm nav-cta-btn">
+          <span>Let's Talk</span>
+          <i class="fa-solid fa-arrow-right-long"></i>
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="status-badge" data-reveal>
+            <span class="status-pulse"></span>
+            <span>Open for Web Application, Software & AI Engineering, Data Science & Data Analysis Roles</span>
+          </div>
+
+          <h1 class="hero-title" data-reveal>
+            Hi, I'm <span class="highlight-name">Golam Rabbani</span>
+            <br>
+            <span class="typing-container">
+              <span id="typed-text"></span>
+              <span class="cursor-blink">|</span>
+            </span>
+          </h1>
+
+          <p class="hero-description" data-reveal>
+            Computer Science <strong>BSc Graduate</strong> from <strong>AIUB</strong> specializing in building end-to-end 
+            <strong>AI Machine Learning Systems</strong>, <strong>Enterprise Web Applications (Django & React)</strong>, 
+            and <strong>Cross-Platform Mobile Apps (Flutter)</strong>. Bridging high-accuracy AI models with production-grade architectures.
+          </p>
+
+          <div class="hero-cta-group" data-reveal>
+            <a href="projects.html" class="btn btn-primary">
+              <i class="fa-solid fa-cubes"></i>
+              <span>Explore Projects</span>
+            </a>
+            <a href="simulator.html" class="btn btn-secondary">
+              <i class="fa-solid fa-play"></i>
+              <span>Launch Live AI Simulator</span>
+            </a>
+            <a href="terminal.html" class="btn btn-outline" title="Open Interactive CLI">
+              <i class="fa-solid fa-terminal"></i>
+              <span>CLI Mode</span>
+            </a>
+          </div>
+
+          <div class="hero-socials" data-reveal>
+            <span class="social-label">Connect:</span>
+            <a href="https://github.com/GolamRabbani09" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="mailto:golamrabbani.dev0@gmail.com" class="social-link" title="Email Direct" id="hero-email-btn">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="contact.html" class="social-link" title="Contact Me">
+              <i class="fa-solid fa-paper-plane"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual" data-reveal>
+          <div class="visual-card-wrapper">
+            <!-- Modern Portrait Showcase Card -->
+            <div class="profile-hero-card">
+              <div class="profile-image-container">
+                <img src="assets/profile.jpg" alt="Golam Rabbani — AI & Full-Stack Engineer" class="profile-photo" id="profile-img">
+                <div class="profile-gradient-overlay"></div>
+                <div class="profile-status-chip">
+                  <span class="pulse-dot-sm"></span>
+                  <span>AIUB CSE Graduate</span>
+                </div>
+              </div>
+              <div class="profile-card-details">
+                <div class="profile-name-row">
+                  <div>
+                    <h3 class="profile-card-name">Golam Rabbani</h3>
+                    <p class="profile-card-sub">AI & Full-Stack Software Engineer</p>
+                  </div>
+                  <div class="verified-badge" title="Verified Engineer">
+                    <i class="fa-solid fa-circle-check"></i>
+                  </div>
+                </div>
+                
+                <!-- Quick Tags -->
+                <div class="profile-tech-pills">
+                  <span class="pill-item"><i class="fa-brands fa-python"></i> Python & ML</span>
+                  <span class="pill-item"><i class="fa-brands fa-react"></i> Django & React</span>
+                  <span class="pill-item"><i class="fa-solid fa-mobile-screen"></i> Flutter</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Badge 1 -->
+            <div class="floating-badge badge-top">
+              <i class="fa-solid fa-brain"></i>
+              <div>
+                <strong>AI Engineering</strong>
+              </div>
+            </div>
+
+            <!-- Floating Badge 2 -->
+            <div class="floating-badge badge-bottom">
+              <i class="fa-solid fa-server"></i>
+              <div>
+                <strong>Full-Stack & APIs</strong>
+                <span>FastAPI • Django • Render</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section section-padding">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-subtitle">ENGINEERING DNA</span>
+          <h2 class="section-title">About & Technical Background</h2>
+          <p class="section-desc">Practical problem solver with end-to-end expertise spanning data science, backend APIs, and interactive client applications.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card" data-reveal>
+            <div class="about-card-icon">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <h3>Full-Stack & Systems Architecture</h3>
+            <p>
+              I architect full-stack applications with robust backend engines (Django, FastAPI, Python) and modern, intuitive frontends (React, Flutter). Developed <strong>SmartERP</strong>, an enterprise-grade multi-tenant management system.
+            </p>
+            <ul class="about-feature-list">
+              <li><i class="fa-solid fa-check-circle"></i> High-throughput asynchronous RESTful APIs (FastAPI/Pydantic)</li>
+              <li><i class="fa-solid fa-check-circle"></i> Scalable relational data schemas (PostgreSQL, SQLite, MySQL)</li>
+              <li><i class="fa-solid fa-check-circle"></i> Cross-platform mobile development using Flutter & Dart</li>
+            </ul>
+          </div>
+
+          <div class="about-card" data-reveal>
+            <div class="about-card-icon">
+              <i class="fa-solid fa-network-wired"></i>
+            </div>
+            <h3>Applied AI, Machine Learning & CV</h3>
+            <p>
+              Deep practical knowledge in handling complex, sparse, high-dimensional datasets. Trained, tuned, and rigorously evaluated 6 model architectures on a 200K+ dataset with 5-fold stratified cross-validation for healthcare triage.
+            </p>
+            <ul class="about-feature-list">
+              <li><i class="fa-solid fa-check-circle"></i> TabNet, XGBoost, LightGBM, and Dense Deep MLPs (Keras/PyTorch)</li>
+              <li><i class="fa-solid fa-check-circle"></i> Computer Vision & Image Processing pipelines with OpenCV</li>
+              <li><i class="fa-solid fa-check-circle"></i> Model serialization & lightweight real-time edge inference</li>
+            </ul>
+          </div>
+
+          <div class="about-card" data-reveal>
+            <div class="about-card-icon">
+              <i class="fa-solid fa-cube"></i>
+            </div>
+            <h3>Low-Level Graphics & Security</h3>
+            <p>
+              Hands-on experience with low-level C++ systems programming, OpenGL 3D graphics rendering engines (volumetric day/night lighting, shaders), and network socket vulnerability analysis scripts.
+            </p>
+            <ul class="about-feature-list">
+              <li><i class="fa-solid fa-check-circle"></i> C++ and OpenGL 3D scene architecture & mesh rendering</li>
+              <li><i class="fa-solid fa-check-circle"></i> Custom Python network security scanner and port auditing</li>
+              <li><i class="fa-solid fa-check-circle"></i> Strong academic foundation in Digital Logic, Circuits & Labs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SHOWCASE -->
+    <section id="projects" class="projects-section section-padding">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-subtitle">PORTFOLIO WORK</span>
+          <h2 class="section-title">Featured Engineering Projects</h2>
+          <p class="section-desc">Explore flagship applications, machine learning architectures, full-stack systems, and graphics engines.</p>
+        </div>
+
+        <!-- Project Filter Tabs -->
+        <div class="project-filters" data-reveal>
+          <button class="filter-btn active" data-filter="all">All Projects (7)</button>
+          <button class="filter-btn" data-filter="ai-ml">AI, ML & Data Mining</button>
+          <button class="filter-btn" data-filter="full-stack">Full-Stack & Web</button>
+          <button class="filter-btn" data-filter="graphics-systems">3D Graphics & Systems</button>
+          <button class="filter-btn" data-filter="cyber-tools">Cybersecurity & Tools</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projects-grid">
+          
+          <!-- PROJECT 1: Smart Health Assistant (B.Sc Thesis Flagship) -->
+          <div class="project-card featured" data-category="ai-ml full-stack" data-reveal>
+            <div class="project-card-banner">
+              <span class="badge-flagship"><i class="fa-solid fa-award"></i> B.Sc Thesis Flagship</span>
+              <span class="badge-lang">Python • PyTorch • Flutter</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-icon-title">
+                <div class="project-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                <div>
+                  <h3 class="project-title">Smart Health Assistant & Specialist Referral</h3>
+                  <span class="project-role">End-to-End AI Triage System & Mobile App</span>
+                </div>
+              </div>
+              <p class="project-desc">
+                An intelligent multi-disease diagnostic assistant trained on <strong>200,000+ records</strong> across 512 disease classes. Features TabNet, XGBoost, and Dense MLP comparative benchmarking, deployed with a <strong>FastAPI</strong> backend and a <strong>Flutter</strong> mobile app with automated specialist directory routing.
+              </p>
+              
+              <div class="project-metrics">
+                <div class="metric"><strong class="highlight-green">94.81%</strong><span>Top-3 Accuracy</span></div>
+                <div class="metric"><strong>512</strong><span>Disease Classes</span></div>
+                <div class="metric"><strong>5-Fold</strong><span>Cross-Validated</span></div>
+              </div>
+
+              <div class="tech-stack-tags">
+                <span>FastAPI</span>
+                <span>Flutter</span>
+                <span>PyTorch (TabNet)</span>
+                <span>XGBoost</span>
+                <span>Scikit-Learn</span>
+                <span>SQLite</span>
+                <span>Render</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/GolamRabbani09/Theses" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                <i class="fa-brands fa-github"></i> Source Code
+              </a>
+              <a href="simulator.html" class="btn btn-sm btn-primary">
+                <i class="fa-solid fa-play"></i> Launch Live Simulator
+              </a>
+            </div>
+          </div>
+
+          <!-- PROJECT 2: Data Warehousing & Data Mining (Real GitHub Repository) -->
+          <div class="project-card" data-category="ai-ml" data-reveal>
+            <div class="project-card-banner">
+              <span class="badge-status"><i class="fa-solid fa-chart-pie"></i> Data Warehousing & Mining</span>
+              <span class="badge-lang">Python • SQL • Scikit-Learn</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-icon-title">
+                <div class="project-icon"><i class="fa-solid fa-database"></i></div>
+                <div>
+                  <h3 class="project-title">DATA-WAREHOUSING-AND-DATA-MINING-</h3>
+                  <span class="project-role">ETL Pipelines, OLAP Schemas & Pattern Mining</span>
+                </div>
+              </div>
+              <p class="project-desc">
+                Comprehensive data warehousing and data mining framework. Implements multi-dimensional star & snowflake schemas, ETL data processing pipelines, OLAP analytics, association rule mining (Apriori), decision trees, k-means clustering, and predictive classification models on enterprise datasets.
+              </p>
+              
+              <div class="project-metrics">
+                <div class="metric"><strong>ETL & OLAP</strong><span>Cube Schemas</span></div>
+                <div class="metric"><strong>Pattern</strong><span>Data Mining</span></div>
+                <div class="metric"><strong>Clustering</strong><span>& Classification</span></div>
+              </div>
+
+              <div class="tech-stack-tags">
+                <span>Data Warehousing</span>
+                <span>Data Mining</span>
+                <span>Python</span>
+                <span>SQL / ETL</span>
+                <span>Scikit-Learn</span>
+                <span>Pandas / NumPy</span>
+                <span>OLAP</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/GolamRabbani09/DATA-WAREHOUSING-AND-DATA-MINING-" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                <i class="fa-brands fa-github"></i> View Repository
+              </a>
+            </div>
+          </div>
+
+          <!-- PROJECT 3: SmartERP (Real GitHub Repository) -->
+          <div class="project-card" data-category="full-stack" data-reveal>
+            <div class="project-card-banner">
+              <span class="badge-status"><i class="fa-solid fa-building"></i> Enterprise System</span>
+              <span class="badge-lang">Django • React • JS</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-icon-title">
+                <div class="project-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+                <div>
+                  <h3 class="project-title">SmartERP — Enterprise & E-Commerce</h3>
+                  <span class="project-role">Full-Stack Enterprise Web Application</span>
+                </div>
+              </div>
+              <p class="project-desc">
+                A robust, multi-tier Enterprise Resource Planning (ERP) and e-commerce platform built with <strong>Django REST Framework</strong> and <strong>React</strong>. Features inventory tracking, automated billing, role-based authorization, and real-time sales reporting.
+              </p>
+              
+              <div class="project-metrics">
+                <div class="metric"><strong>Multi-Tenant</strong><span>Architecture</span></div>
+                <div class="metric"><strong>RESTful</strong><span>API Endpoints</span></div>
+                <div class="metric"><strong>Role-Based</strong><span>Auth & RBAC</span></div>
+              </div>
+
+              <div class="tech-stack-tags">
+                <span>Django</span>
+                <span>React.js</span>
+                <span>Python</span>
+                <span>JavaScript</span>
+                <span>PostgreSQL</span>
+                <span>REST API</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/GolamRabbani09/SmartERP" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                <i class="fa-brands fa-github"></i> View Repository
+              </a>
+            </div>
+          </div>
+
+          <!-- PROJECT 4: 3D Village Scenario (Real GitHub Repository) -->
+          <div class="project-card" data-category="graphics-systems" data-reveal>
+            <div class="project-card-banner">
+              <span class="badge-status"><i class="fa-solid fa-cube"></i> 3D Engine</span>
+              <span class="badge-lang">C++ • OpenGL</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-icon-title">
+                <div class="project-icon"><i class="fa-solid fa-mountain-sun"></i></div>
+                <div>
+                  <h3 class="project-title">3D Village & Environment Engine</h3>
+                  <span class="project-role">OpenGL Real-time Computer Graphics</span>
+                </div>
+              </div>
+              <p class="project-desc">
+                Interactive 3D simulation environment built with <strong>C++ and OpenGL</strong>. Implements real-time lighting calculations, volumetric day-and-night cycles, procedural cloud movement, terrain modeling, and interactive camera perspective navigation.
+              </p>
+              
+              <div class="project-metrics">
+                <div class="metric"><strong>60 FPS</strong><span>Real-Time</span></div>
+                <div class="metric"><strong>Dynamic</strong><span>Day/Night Lighting</span></div>
+                <div class="metric"><strong>GLSL</strong><span>Shaders</span></div>
+              </div>
+
+              <div class="tech-stack-tags">
+                <span>C++</span>
+                <span>OpenGL</span>
+                <span>GLSL Shaders</span>
+                <span>3D Rendering</span>
+                <span>Computer Graphics</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/GolamRabbani09/Village-Scenario" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                <i class="fa-brands fa-github"></i> View Repository
+              </a>
+            </div>
+          </div>
+
+          <!-- PROJECT 5: Network_Scan (Real GitHub Repository) -->
+          <div class="project-card" data-category="cyber-tools" data-reveal>
+            <div class="project-card-banner">
+              <span class="badge-status"><i class="fa-solid fa-shield"></i> Security Tool</span>
+              <span class="badge-lang">Python • Sockets</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-icon-title">
+                <div class="project-icon"><i class="fa-solid fa-network-wired"></i></div>
+                <div>
+                  <h3 class="project-title">NetworkScan — Port & Vulnerability Auditor</h3>
+                  <span class="project-role">Asynchronous Cyber Security Utility</span>
+                </div>
+              </div>
+              <p class="project-desc">
+                High-speed multithreaded network scanning utility developed in Python. Discovers active subnet hosts, maps open TCP/UDP ports, detects active network services, and outputs security audit summaries.
+              </p>
+              
+              <div class="project-metrics">
+                <div class="metric"><strong>Multithreaded</strong><span>Socket Engine</span></div>
+                <div class="metric"><strong>Subnet</strong><span>Host Discovery</span></div>
+                <div class="metric"><strong>Security</strong><span>Port Auditing</span></div>
+              </div>
+
+              <div class="tech-stack-tags">
+                <span>Python</span>
+                <span>Raw Sockets</span>
+                <span>Multithreading</span>
+                <span>Network Security</span>
+                <span>Port Auditing</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/GolamRabbani09/Network_Scan" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                <i class="fa-brands fa-github"></i> View Repository
+              </a>
+            </div>
+          </div>
+
+          <!-- PROJECT 6: CVPR Computer Vision Suite (Real GitHub Repository) -->
+          <div class="project-card" data-category="ai-ml" data-reveal>
+            <div class="project-card-banner">
+              <span class="badge-status"><i class="fa-solid fa-eye"></i> Computer Vision</span>
+              <span class="badge-lang">OpenCV • Python</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-icon-title">
+                <div class="project-icon"><i class="fa-solid fa-camera-retro"></i></div>
+                <div>
+                  <h3 class="project-title">CVPR — Computer Vision & Pattern Recognition</h3>
+                  <span class="project-role">Image Processing & Feature Extraction</span>
+                </div>
+              </div>
+              <p class="project-desc">
+                Comprehensive collection of computer vision pipelines, including edge detection algorithms (Sobel, Canny), morphological transformations, feature extraction, and image classification models.
+              </p>
+              
+              <div class="project-metrics">
+                <div class="metric"><strong>OpenCV</strong><span>Pipelines</span></div>
+                <div class="metric"><strong>Spatial</strong><span>Filtering</span></div>
+                <div class="metric"><strong>Pattern</strong><span>Classifiers</span></div>
+              </div>
+
+              <div class="tech-stack-tags">
+                <span>Python</span>
+                <span>OpenCV</span>
+                <span>NumPy</span>
+                <span>Jupyter Notebook</span>
+                <span>Pattern Recognition</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/GolamRabbani09/CVPR" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                <i class="fa-brands fa-github"></i> View Repository
+              </a>
+            </div>
+          </div>
+
+          <!-- PROJECT 7: Meal Management Automation (Real GitHub Repository) -->
+          <div class="project-card" data-category="full-stack cyber-tools" data-reveal>
+            <div class="project-card-banner">
+              <span class="badge-status"><i class="fa-solid fa-calculator"></i> Management App</span>
+              <span class="badge-lang">JavaScript • Web</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-icon-title">
+                <div class="project-icon"><i class="fa-solid fa-utensils"></i></div>
+                <div>
+                  <h3 class="project-title">MilManagement — Hostel & Meal Accounting</h3>
+                  <span class="project-role">Financial & Resource Tracking System</span>
+                </div>
+              </div>
+              <p class="project-desc">
+                Dynamic automated meal rate calculation and accounting platform designed for community hostels. Automates monthly expense balancing, daily attendance logging, and generates instant budget breakdowns.
+              </p>
+              
+              <div class="project-metrics">
+                <div class="metric"><strong>Automated</strong><span>Ledger Engine</span></div>
+                <div class="metric"><strong>Real-Time</strong><span>Cost Splitting</span></div>
+                <div class="metric"><strong>Dynamic</strong><span>DOM Interface</span></div>
+              </div>
+
+              <div class="tech-stack-tags">
+                <span>JavaScript</span>
+                <span>HTML5 / CSS3</span>
+                <span>Database</span>
+                <span>Accounting Logic</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/GolamRabbani09/MilManement" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                <i class="fa-brands fa-github"></i> View Repository
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH & THESIS HIGHLIGHT -->
+    <section id="research" class="research-section section-padding">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-subtitle">SCIENTIFIC CONTRIBUTIONS</span>
+          <h2 class="section-title">Undergraduate Research & Thesis</h2>
+          <p class="section-desc">Design of a Machine Learning-Based Smart Health Assistant for Early Diagnosis and Specialist Mapping.</p>
+        </div>
+
+        <div class="research-showcase-card" data-reveal>
+          <div class="research-header-row">
+            <div>
+              <span class="research-tag">AIUB BSc CSE THESIS • SUPERVISED BY SYEDA ANIKA TASNIM</span>
+              <h3 class="research-heading">Comparative Evaluation of 6 Tabular Machine Learning Architectures on 200K+ Symptom-Disease Corpus</h3>
+            </div>
+            <a href="https://github.com/GolamRabbani09/Theses" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+              <i class="fa-brands fa-github"></i> View Thesis Repo
+            </a>
+          </div>
+
+          <div class="research-grid">
+            <div class="research-block">
+              <h4><i class="fa-solid fa-database text-accent"></i> Master Dataset Engineering</h4>
+              <p>Standardized and combined 4 disparate open-source medical datasets into an internally consistent master repository. Implemented strict rare-class exclusion rules to handle multi-label class imbalance across 512 disease categories.</p>
+            </div>
+
+            <div class="research-block">
+              <h4><i class="fa-solid fa-chart-column text-accent"></i> 6-Model Benchmark</h4>
+              <p>Trained and compared <strong>TabNet (PyTorch)</strong>, <strong>Dense MLP (Keras)</strong>, <strong>XGBoost</strong>, <strong>LightGBM</strong>, <strong>Logistic Regression</strong>, and <strong>Random Forest</strong> using 5-Fold Stratified Cross-Validation.</p>
+            </div>
+
+            <div class="research-block">
+              <h4><i class="fa-solid fa-crosshairs text-accent"></i> Top-1 & Top-3 Diagnostic Accuracy</h4>
+              <p>Evaluated shortlist-aware accuracy. <strong>Multilayer Perceptron (MLP)</strong> achieved <strong>83.01% Top-1</strong> and <strong>94.81% Top-3</strong> accuracy, closely followed by <strong>TabNet (81.57% / 93.99%)</strong> and <strong>XGBoost (80.17% / 93.58%)</strong>.</p>
+            </div>
+
+            <div class="research-block">
+              <h4><i class="fa-solid fa-mobile-screen-button text-accent"></i> Deployment Optimization</h4>
+              <p>Selected and serialized regularized Logistic Regression (~91.10% Top-3 on Master set) for sub-20ms low-latency mobile inference over FastAPI backend, connecting 296+ specialist doctors to patients without heavy server overhead.</p>
+            </div>
+          </div>
+
+          <!-- Comparative Model Table -->
+          <div class="research-table-wrapper">
+            <h4 class="table-title"><i class="fa-solid fa-table-list text-accent"></i> Large Dataset 5-Fold Cross-Validation Performance Summary</h4>
+            <div class="table-responsive">
+              <table class="benchmark-table">
+                <thead>
+                  <tr>
+                    <th>Model Architecture</th>
+                    <th>Framework</th>
+                    <th>CV Top-1 Accuracy</th>
+                    <th>CV Top-3 Accuracy</th>
+                    <th>Deployment Suitability</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="highlight-row">
+                    <td><strong>Multilayer Perceptron (MLP)</strong></td>
+                    <td>Keras / T4 GPU</td>
+                    <td><strong>83.01% &plusmn; 0.23%</strong></td>
+                    <td><strong>94.81% &plusmn; 0.06%</strong></td>
+                    <td><span class="status-tag high">High Precision / Research</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>TabNet (Attention-based)</strong></td>
+                    <td>PyTorch / GPU</td>
+                    <td><strong>81.57% &plusmn; 0.31%</strong></td>
+                    <td><strong>93.99% &plusmn; 0.10%</strong></td>
+                    <td><span class="status-tag high">Interpretable Attention</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>XGBoost</strong></td>
+                    <td>XGBoost / GPU</td>
+                    <td>80.17% &plusmn; 0.13%</td>
+                    <td>93.58% &plusmn; 0.08%</td>
+                    <td><span class="status-tag medium">Tree Ensemble</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>LightGBM</strong></td>
+                    <td>LightGBM / CPU</td>
+                    <td>64.63% &plusmn; 0.20%</td>
+                    <td>88.54% &plusmn; 0.12%</td>
+                    <td><span class="status-tag low">Baseline</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Empirical Research Artifacts & Visualizations -->
+          <div class="research-visuals-wrapper">
+            <div class="research-visuals-header">
+              <div>
+                <h4 class="table-title"><i class="fa-solid fa-chart-line text-accent"></i> Empirical Model Artifacts & Confusion Matrices</h4>
+                <p class="research-subtext">Convergence curves and normalized confusion matrices generated during 5-fold cross-validation on Colab NVIDIA T4 GPU.</p>
+              </div>
+              <div class="research-artifact-tabs">
+                <button class="art-tab active" data-target="tab-tabnet">TabNet (PyTorch)</button>
+                <button class="art-tab" data-target="tab-mlp">Dense MLP</button>
+                <button class="art-tab" data-target="tab-xgb">XGBoost</button>
+                <button class="art-tab" data-target="tab-lgbm">LightGBM</button>
+              </div>
+            </div>
+
+            <!-- TabNet Panel -->
+            <div class="artifact-panel active" id="tab-tabnet">
+              <div class="artifact-image-grid">
+                <div class="artifact-image-card">
+                  <div class="card-meta"><span>TabNet Accuracy Convergence (100 Epochs)</span><i class="fa-solid fa-chart-area"></i></div>
+                  <img src="assets/thesis/tabnet_convergence.png" alt="TabNet Convergence Curve" class="artifact-img">
+                </div>
+                <div class="artifact-image-card">
+                  <div class="card-meta"><span>TabNet Normalized Confusion Matrix (Top-15)</span><i class="fa-solid fa-table-cells-large"></i></div>
+                  <img src="assets/thesis/tabnet_confusion_matrix.png" alt="TabNet Confusion Matrix" class="artifact-img">
+                </div>
+              </div>
+            </div>
+
+            <!-- Dense MLP Panel -->
+            <div class="artifact-panel" id="tab-mlp">
+              <div class="artifact-image-grid">
+                <div class="artifact-image-card">
+                  <div class="card-meta"><span>Dense MLP Normalized Confusion Matrix</span><i class="fa-solid fa-table-cells-large"></i></div>
+                  <img src="assets/thesis/mlp_confusion_matrix.png" alt="MLP Confusion Matrix" class="artifact-img">
+                </div>
+                <div class="artifact-image-card info-card">
+                  <div class="card-meta"><span>Architecture Configuration (Keras / GPU)</span><i class="fa-solid fa-gears"></i></div>
+                  <ul class="param-list">
+                    <li><i class="fa-solid fa-microchip text-accent"></i> <strong>Layer Stack:</strong> 512 &rarr; 256 &rarr; 128 (Dense + BatchNorm)</li>
+                    <li><i class="fa-solid fa-filter text-accent"></i> <strong>Dropout Regularization:</strong> 0.35 / 0.30 / 0.20</li>
+                    <li><i class="fa-solid fa-bolt text-accent"></i> <strong>Optimizer & LR:</strong> Adam (lr = 1e-3, batch size = 1024)</li>
+                    <li><i class="fa-solid fa-check-double text-accent"></i> <strong>Top-1 CV Accuracy:</strong> 83.01% &plusmn; 0.23%</li>
+                    <li><i class="fa-solid fa-award text-accent"></i> <strong>Top-3 CV Accuracy:</strong> 94.81% &plusmn; 0.06% (Highest in Benchmark)</li>
+                    <li><i class="fa-solid fa-database text-accent"></i> <strong>Corpus Size:</strong> 187,850 Cleaned Records (512 Classes)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- XGBoost Panel -->
+            <div class="artifact-panel" id="tab-xgb">
+              <div class="artifact-image-grid">
+                <div class="artifact-image-card">
+                  <div class="card-meta"><span>XGBoost Multi-class Log-Loss Convergence</span><i class="fa-solid fa-chart-line"></i></div>
+                  <img src="assets/thesis/xgb_convergence.png" alt="XGBoost Convergence" class="artifact-img">
+                </div>
+                <div class="artifact-image-card">
+                  <div class="card-meta"><span>XGBoost Normalized Confusion Matrix (Top-15)</span><i class="fa-solid fa-table-cells-large"></i></div>
+                  <img src="assets/thesis/xgb_confusion_matrix.png" alt="XGBoost Confusion Matrix" class="artifact-img">
+                </div>
+              </div>
+            </div>
+
+            <!-- LightGBM Panel -->
+            <div class="artifact-panel" id="tab-lgbm">
+              <div class="artifact-image-grid">
+                <div class="artifact-image-card">
+                  <div class="card-meta"><span>LightGBM Training vs Validation Log-Loss</span><i class="fa-solid fa-chart-line"></i></div>
+                  <img src="assets/thesis/lgbm_convergence.png" alt="LightGBM Convergence" class="artifact-img">
+                </div>
+                <div class="artifact-image-card">
+                  <div class="card-meta"><span>LightGBM Normalized Confusion Matrix</span><i class="fa-solid fa-table-cells-large"></i></div>
+                  <img src="assets/thesis/lgbm_confusion_matrix.png" alt="LightGBM Confusion Matrix" class="artifact-img">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS MATRIX -->
+    <section id="skills" class="skills-section section-padding">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-subtitle">CAPABILITIES</span>
+          <h2 class="section-title">Technical Skill Matrix</h2>
+          <p class="section-desc">Core competencies, programming languages, frameworks, and engineering tools.</p>
+        </div>
+
+        <div class="skills-grid">
+          
+          <!-- Category 1: AI & Data Science -->
+          <div class="skill-category-card" data-reveal>
+            <div class="skill-card-header">
+              <i class="fa-solid fa-brain"></i>
+              <h3>AI & Data Science</h3>
+            </div>
+            <div class="skill-tags-group">
+              <div class="skill-badge"><i class="fa-brands fa-python"></i> Python</div>
+              <div class="skill-badge"><i class="fa-solid fa-layer-group"></i> PyTorch</div>
+              <div class="skill-badge"><i class="fa-solid fa-network-wired"></i> TabNet</div>
+              <div class="skill-badge"><i class="fa-solid fa-tree"></i> XGBoost / LightGBM</div>
+              <div class="skill-badge"><i class="fa-solid fa-cubes-stacked"></i> Keras & MLP</div>
+              <div class="skill-badge"><i class="fa-solid fa-gears"></i> Scikit-Learn</div>
+              <div class="skill-badge"><i class="fa-solid fa-camera"></i> OpenCV</div>
+              <div class="skill-badge"><i class="fa-solid fa-chart-line"></i> Pandas & NumPy</div>
+              <div class="skill-badge"><i class="fa-solid fa-chart-pie"></i> R Script</div>
+            </div>
+          </div>
+
+          <!-- Category 2: Backend & APIs -->
+          <div class="skill-category-card" data-reveal>
+            <div class="skill-card-header">
+              <i class="fa-solid fa-server"></i>
+              <h3>Backend & Architecture</h3>
+            </div>
+            <div class="skill-tags-group">
+              <div class="skill-badge"><i class="fa-solid fa-bolt"></i> FastAPI</div>
+              <div class="skill-badge"><i class="fa-brands fa-python"></i> Django & DRF</div>
+              <div class="skill-badge"><i class="fa-solid fa-shield-halved"></i> Pydantic</div>
+              <div class="skill-badge"><i class="fa-solid fa-cloud"></i> RESTful APIs</div>
+              <div class="skill-badge"><i class="fa-solid fa-database"></i> PostgreSQL</div>
+              <div class="skill-badge"><i class="fa-solid fa-database"></i> SQLite</div>
+              <div class="skill-badge"><i class="fa-brands fa-php"></i> PHP & MySQL</div>
+              <div class="skill-badge"><i class="fa-brands fa-node-js"></i> Node.js Basics</div>
+            </div>
+          </div>
+
+          <!-- Category 3: Mobile & Frontend -->
+          <div class="skill-category-card" data-reveal>
+            <div class="skill-card-header">
+              <i class="fa-solid fa-mobile-screen"></i>
+              <h3>Frontend & Mobile</h3>
+            </div>
+            <div class="skill-tags-group">
+              <div class="skill-badge"><i class="fa-solid fa-mobile-screen-button"></i> Flutter</div>
+              <div class="skill-badge"><i class="fa-brands fa-dart-lang"></i> Dart</div>
+              <div class="skill-badge"><i class="fa-brands fa-react"></i> React.js</div>
+              <div class="skill-badge"><i class="fa-brands fa-js"></i> JavaScript (ES6+)</div>
+              <div class="skill-badge"><i class="fa-brands fa-html5"></i> HTML5 & Semantic Web</div>
+              <div class="skill-badge"><i class="fa-brands fa-css3-alt"></i> Modern CSS3 & Grid</div>
+              <div class="skill-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> UI/UX Design (HCI)</div>
+              <div class="skill-badge"><i class="fa-solid fa-compass-drafting"></i> CAD Drafting</div>
+            </div>
+          </div>
+
+          <!-- Category 4: Systems & DevOps -->
+          <div class="skill-category-card" data-reveal>
+            <div class="skill-card-header">
+              <i class="fa-solid fa-terminal"></i>
+              <h3>Systems, 3D & Tools</h3>
+            </div>
+            <div class="skill-tags-group">
+              <div class="skill-badge"><i class="fa-solid fa-c"></i> C / C++</div>
+              <div class="skill-badge"><i class="fa-solid fa-cube"></i> OpenGL 3D</div>
+              <div class="skill-badge"><i class="fa-brands fa-git-alt"></i> Git & GitHub</div>
+              <div class="skill-badge"><i class="fa-solid fa-cloud-arrow-up"></i> Render Cloud</div>
+              <div class="skill-badge"><i class="fa-solid fa-microchip"></i> Google Colab GPU</div>
+              <div class="skill-badge"><i class="fa-brands fa-linux"></i> Linux / Bash</div>
+              <div class="skill-badge"><i class="fa-solid fa-network-wired"></i> Socket Programming</div>
+              <div class="skill-badge"><i class="fa-solid fa-microchip"></i> Digital Logic & Circuits</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE DEVELOPER TERMINAL / CLI MODE -->
+    <section id="terminal" class="terminal-section section-padding">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-subtitle">DEVELOPER CONSOLE</span>
+          <h2 class="section-title">Interactive Terminal CLI</h2>
+          <p class="section-desc">Type commands below or click quick action buttons to explore my background, thesis, and skills in terminal mode.</p>
+        </div>
+
+        <div class="terminal-window" data-reveal>
+          <div class="terminal-header">
+            <div class="terminal-controls">
+              <span class="ctrl-dot dot-close"></span>
+              <span class="ctrl-dot dot-min"></span>
+              <span class="ctrl-dot dot-max"></span>
+            </div>
+            <div class="terminal-title">golam-rabbani@dev-box: ~ (zsh)</div>
+            <div class="terminal-status"><i class="fa-solid fa-wifi"></i> Online</div>
+          </div>
+
+          <div class="terminal-quick-chips">
+            <span class="chip-label">Quick Commands:</span>
+            <button class="term-chip" data-cmd="help">help</button>
+            <button class="term-chip" data-cmd="skills">skills</button>
+            <button class="term-chip" data-cmd="projects">projects</button>
+            <button class="term-chip" data-cmd="thesis">thesis</button>
+            <button class="term-chip" data-cmd="grade">grade</button>
+            <button class="term-chip" data-cmd="contact">contact</button>
+            <button class="term-chip" data-cmd="clear">clear</button>
+          </div>
+
+          <div class="terminal-body" id="terminal-body">
+            <div class="term-line output-line">
+              Welcome to <span class="text-accent">Golam Rabbani's Interactive Terminal</span> v2.0.0.
+              <br>Type <span class="text-yellow">help</span> to view available commands, or click any quick chip above.
+            </div>
+          </div>
+
+          <div class="terminal-input-row">
+            <span class="term-prompt"><span class="user">visitor@rabbani</span>:<span class="path">~</span>$</span>
+            <input type="text" id="terminal-input" class="terminal-input" placeholder="Type a command (e.g. 'help', 'projects', 'thesis')..." autocomplete="off" spellcheck="false">
+            <button id="terminal-send-btn" class="terminal-send-btn" title="Run command">
+              <i class="fa-solid fa-arrow-turn-down"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT & CONNECT HUB -->
+    <section id="contact" class="contact-section section-padding">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-subtitle">GET IN TOUCH</span>
+          <h2 class="section-title">Let's Build Something Extraordinary</h2>
+          <p class="section-desc">Looking for an engineer who combines AI modeling depth with end-to-end full-stack execution? Drop me a message!</p>
+        </div>
+
+        <div class="contact-wrapper">
+          <!-- Left: Direct Info -->
+          <div class="contact-info-card" data-reveal>
+            <h3>Contact Information</h3>
+            <p>I am actively available for software engineering roles, AI/ML engineering positions, freelance projects, and research collaborations.</p>
+
+            <div class="contact-detail-items">
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div>
+                  <span class="item-label">Location</span>
+                  <strong>Dhaka, Bangladesh (Available Worldwide & Remote)</strong>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div>
+                  <span class="item-label">Education</span>
+                  <strong>B.Sc in Computer Science & Engineering, AIUB</strong>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div>
+                  <span class="item-label">Email Address</span>
+                  <div class="email-copy-wrapper">
+                    <strong id="email-text">golamrabbani.dev0@gmail.com</strong>
+                    <button id="copy-email-btn" class="btn-copy" title="Copy Email">
+                      <i class="fa-regular fa-copy"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+                <div>
+                  <span class="item-label">GitHub</span>
+                  <a href="https://github.com/GolamRabbani09" target="_blank" rel="noopener noreferrer" class="link-highlight">
+                    github.com/GolamRabbani09
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-social-pills">
+              <a href="https://github.com/GolamRabbani09" target="_blank" rel="noopener noreferrer" class="social-pill">
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+              <a href="mailto:golamrabbani.dev0@gmail.com" class="social-pill">
+                <i class="fa-solid fa-envelope"></i> Direct Email
+              </a>
+              <a href="assets/docs/bsc_grade_report.pdf" target="_blank" rel="noopener noreferrer" class="social-pill">
+                <i class="fa-solid fa-file-pdf"></i> B.Sc Grade Report PDF
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Message Form -->
+          <div class="contact-form-card" data-reveal>
+            <form id="portfolio-contact-form" class="contact-form" action="https://formsubmit.co/golamrabbani.dev0@gmail.com" method="POST">
+              <!-- Direct Email Delivery Config (FormSubmit) -->
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_subject" value="🚀 New Message from Golam Rabbani Portfolio">
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-name">Your Name <span class="text-accent">*</span></label>
+                  <input type="text" id="contact-name" name="name" required placeholder="e.g. John Doe">
+                </div>
+                <div class="form-group">
+                  <label for="contact-email">Your Email <span class="text-accent">*</span></label>
+                  <input type="email" id="contact-email" name="email" required placeholder="john@example.com">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject">Subject / Project Inquiry</label>
+                <input type="text" id="contact-subject" name="subject" placeholder="e.g. AI Engineering Opportunity / Project Discussion">
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">Your Message <span class="text-accent">*</span></label>
+                <textarea id="contact-message" name="message" rows="5" required placeholder="Hi Golam, I reviewed your Smart Health Assistant and Data Mining projects and would love to connect..."></textarea>
+              </div>
+
+              <div class="contact-form-btns" style="display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 0.5rem;">
+                <button type="submit" class="btn btn-primary" id="form-submit-btn" style="flex: 1; min-width: 200px;">
+                  <span>Send Message</span>
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=golamrabbani.dev0@gmail.com&su=Portfolio%20Inquiry" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="min-width: 170px;">
+                  <i class="fa-brands fa-google"></i>
+                  <span>Direct Gmail</span>
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Universal High-End Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Column 1: Brand & Philosophy -->
+        <div class="footer-col footer-brand-col">
+          <a href="index.html" class="nav-brand">
+            <div class="brand-monogram">GR</div>
+            <span class="brand-name">Golam<span class="brand-accent">Rabbani</span></span>
+          </a>
+          <p>
+            Computer Science BSc Graduate from AIUB specializing in building end-to-end AI Machine Learning Systems, Enterprise Web Applications, and Cross-Platform Mobile Apps.
+          </p>
+          <a href="mailto:golamrabbani.dev0@gmail.com" class="footer-email-chip">
+            <span class="status-pulse" style="width: 6px; height: 6px;"></span>
+            <span>golamrabbani.dev0@gmail.com</span>
+          </a>
+        </div>
+
+        <!-- Column 2: Navigation Routes -->
+        <div class="footer-col">
+          <h4><i class="fa-solid fa-compass"></i> Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html"><i class="fa-solid fa-house-chimney"></i> Home</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-user-astronaut"></i> About</a></li>
+            <li><a href="simulator.html"><i class="fa-solid fa-microchip text-accent"></i> Live AI Demo</a></li>
+            <li><a href="projects.html"><i class="fa-solid fa-code-branch"></i> Projects</a></li>
+            <li><a href="skills.html"><i class="fa-solid fa-layer-group"></i> Skills</a></li>
+            <li><a href="research.html"><i class="fa-solid fa-flask-vial"></i> Research</a></li>
+            <li><a href="terminal.html"><i class="fa-solid fa-terminal"></i> Terminal</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-paper-plane"></i> Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Academic Credentials & Connect -->
+        <div class="footer-col">
+          <h4><i class="fa-solid fa-graduation-cap"></i> Academic & Connect</h4>
+          <div class="footer-academic-card">
+            <h5>AIUB — CSE Department</h5>
+            <p>142 Credits Completed • Student ID: 22-46560-1</p>
+          </div>
+          <div class="footer-quick-btns">
+            <a href="assets/docs/bsc_grade_report.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline" title="Official Grade Report">
+              <i class="fa-solid fa-file-pdf text-accent"></i> B.Sc Grade Report
+            </a>
+            <a href="https://github.com/GolamRabbani09" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline" title="GitHub">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Golam Rabbani. Crafted with precision & clean code.</p>
+        <button id="back-to-top" class="back-to-top-btn" title="Back to top" aria-label="Back to top">
+          <i class="fa-solid fa-arrow-up"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

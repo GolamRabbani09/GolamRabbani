@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live AI Medical Triage Simulator — Smart Health Assistant | Golam Rabbani</title>
+  <meta name="description" content="Live Interactive Clinical AI Diagnostic & Specialist Referral Simulator engineered by Golam Rabbani (B.Sc CSE, AIUB). 512 disease classes, 6 ML models, 296 verified doctors.">
+  <meta name="keywords" content="Smart Health Assistant, AI Medical Triage Simulator, Disease Prediction AI, Golam Rabbani AIUB">
+  <meta name="author" content="Golam Rabbani">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://golamrabbani09.github.io/simulator.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Live AI Medical Triage Simulator — Smart Health Assistant">
+  <meta property="og:description" content="Test real-time clinical disease triage powered by TabNet, XGBoost, and MLP models.">
+  <meta property="og:url" content="https://golamrabbani09.github.io/simulator.html">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%20width=%22100%22%20height=%22100%22><text y=%22.9em%22 font-size=%2290%22>🩺</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Simulator Stylesheet -->
+  <link rel="stylesheet" href="simulator.css">
+</head>
+<body class="sim-body">
+
+  <!-- Ambient Particle Canvas & Cursor Glow -->
+  <canvas id="ambient-canvas"></canvas>
+  <div class="sim-cursor-glow" id="cursor-glow"></div>
+
+  <!-- TOP APP NAVIGATION BAR -->
+  <header class="sim-navbar">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="index.html" class="back-link">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Back to Portfolio</span>
+        </a>
+        <div class="nav-divider"></div>
+        <div class="nav-brand-title">
+          <div class="brand-badge-icon">
+            <i class="fa-solid fa-heart-pulse"></i>
+          </div>
+          <div>
+            <h1>Smart Health Assistant <span class="live-pill">LIVE DEMO</span></h1>
+            <p>Clinical AI Diagnostic Triage & Specialist Referral Engine • Golam Rabbani Thesis</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-right">
+        <button id="open-full-directory-btn" class="btn-directory-nav">
+          <i class="fa-solid fa-hospital-user"></i>
+          <span>Doctor Directory (296)</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN SIMULATOR CONTENT CONTAINER -->
+  <main class="sim-main-container">
+    
+    <div class="sim-intro-header">
+      <span class="sim-kicker"><i class="fa-solid fa-flask"></i> INTERACTIVE MACHINE LEARNING SIMULATION</span>
+      <h2>Clinical Decision Support System</h2>
+      <p>Select symptoms from the matrix or use rapid clinical presets to evaluate multi-label disease probability and automatic physician routing.</p>
+    </div>
+
+    <!-- TRIAGE 2-COLUMN CONTAINER -->
+    <div class="triage-card-wrapper">
+      
+      <!-- LEFT COLUMN: SYMPTOM MATRIX & PRESETS -->
+      <div class="triage-input-col">
+        
+        <!-- Rapid Presets -->
+        <div class="triage-box-header">
+          <h4><i class="fa-solid fa-bolt text-accent"></i> Quick Clinical Presets</h4>
+        </div>
+        <div class="preset-btn-row">
+          <button class="preset-btn" data-preset="cardiac"><i class="fa-solid fa-heart-crack"></i> Cardiac Risk</button>
+          <button class="preset-btn" data-preset="respiratory"><i class="fa-solid fa-lungs"></i> Respiratory</button>
+          <button class="preset-btn" data-preset="neuro"><i class="fa-solid fa-brain"></i> Neurological</button>
+          <button class="preset-btn" data-preset="ortho"><i class="fa-solid fa-bone"></i> Orthopedic</button>
+          <button class="preset-btn" data-preset="gastro"><i class="fa-solid fa-utensils"></i> Gastro</button>
+          <button class="preset-btn" data-preset="derma"><i class="fa-solid fa-hand-dots"></i> Derma</button>
+        </div>
+
+        <!-- Search & Filter Bar -->
+        <div class="symptom-search-bar">
+          <i class="fa-solid fa-magnifying-glass search-ico"></i>
+          <input type="text" id="symptom-filter-input" placeholder="Search symptom (e.g. chest pain, fever, vertigo, rash, joint pain)...">
+          <span class="search-count" id="chip-match-count">Showing all</span>
+        </div>
+
+        <!-- 1. Cardiovascular Symptoms -->
+        <div class="symptom-category-section">
+          <span class="category-label"><i class="fa-solid fa-heart-pulse text-rose"></i> Cardiovascular Symptoms</span>
+          <div class="chip-cloud">
+            <button class="symptom-chip" data-symptom="Chest Pain">Chest Pain</button>
+            <button class="symptom-chip" data-symptom="Chest Tightness">Chest Tightness</button>
+            <button class="symptom-chip" data-symptom="Shortness of Breath">Shortness of Breath</button>
+            <button class="symptom-chip" data-symptom="Irregular Heartbeat">Irregular Heartbeat / Palpitation</button>
+            <button class="symptom-chip" data-symptom="Radiating Arm Pain">Radiating Left Arm / Jaw Pain</button>
+            <button class="symptom-chip" data-symptom="Cold Sweats">Cold Sweats (Diaphoresis)</button>
+            <button class="symptom-chip" data-symptom="Ankle Edema">Bilateral Ankle / Leg Edema</button>
+            <button class="symptom-chip" data-symptom="Fatigue on Exertion">Fatigue on Exertion</button>
+          </div>
+        </div>
+
+        <!-- 2. Respiratory & Pulmonary Symptoms -->
+        <div class="symptom-category-section">
+          <span class="category-label"><i class="fa-solid fa-lungs text-cyan"></i> Respiratory & Pulmonary</span>
+          <div class="chip-cloud">
+            <button class="symptom-chip" data-symptom="Persistent Cough">Persistent Dry Cough</button>
+            <button class="symptom-chip" data-symptom="Productive Sputum">Productive Sputum Cough</button>
+            <button class="symptom-chip" data-symptom="High Fever">High Fever & Chills</button>
+            <button class="symptom-chip" data-symptom="Wheezing">Expiratory Wheezing</button>
+            <button class="symptom-chip" data-symptom="Hemoptysis">Hemoptysis (Blood in Cough)</button>
+            <button class="symptom-chip" data-symptom="Pleuritic Pain">Sharp Pleuritic Chest Pain</button>
+            <button class="symptom-chip" data-symptom="Sore Throat">Sore Throat & Hoarseness</button>
+          </div>
+        </div>
+
+        <!-- 3. Neurological & Sensory Symptoms -->
+        <div class="symptom-category-section">
+          <span class="category-label"><i class="fa-solid fa-brain text-purple"></i> Neurological & Sensory</span>
+          <div class="chip-cloud">
+            <button class="symptom-chip" data-symptom="Severe Headache">Severe Throbbing Headache</button>
+            <button class="symptom-chip" data-symptom="Dizziness & Vertigo">Dizziness & Rotational Vertigo</button>
+            <button class="symptom-chip" data-symptom="Visual Aura">Visual Blur & Flashing Aura</button>
+            <button class="symptom-chip" data-symptom="Photophobia">Photophobia (Light Sensitivity)</button>
+            <button class="symptom-chip" data-symptom="Limb Numbness">Limb Numbness & Tingling</button>
+            <button class="symptom-chip" data-symptom="Muscle Weakness">Muscle Weakness / Paresis</button>
+            <button class="symptom-chip" data-symptom="Involuntary Tremors">Involuntary Resting Tremors</button>
+          </div>
+        </div>
+
+        <!-- 4. Gastrointestinal & Abdominal -->
+        <div class="symptom-category-section">
+          <span class="category-label"><i class="fa-solid fa-shield-virus text-emerald"></i> Gastrointestinal & Hepatic</span>
+          <div class="chip-cloud">
+            <button class="symptom-chip" data-symptom="Epigastric Pain">Epigastric Burning Pain</button>
+            <button class="symptom-chip" data-symptom="Acid Reflux">Acid Reflux / Heartburn (GERD)</button>
+            <button class="symptom-chip" data-symptom="Nausea & Vomiting">Nausea & Postprandial Vomiting</button>
+            <button class="symptom-chip" data-symptom="Abdominal Bloating">Abdominal Cramping & Bloating</button>
+            <button class="symptom-chip" data-symptom="Loss of Appetite">Loss of Appetite (Anorexia)</button>
+            <button class="symptom-chip" data-symptom="Jaundice">Yellowing of Eyes / Skin (Jaundice)</button>
+            <button class="symptom-chip" data-symptom="Watery Diarrhea">Acute Watery Diarrhea</button>
+          </div>
+        </div>
+
+        <!-- 5. Musculoskeletal & Orthopedic -->
+        <div class="symptom-category-section">
+          <span class="category-label"><i class="fa-solid fa-bone text-accent"></i> Musculoskeletal & Orthopedic</span>
+          <div class="chip-cloud">
+            <button class="symptom-chip" data-symptom="Joint Pain & Swelling">Symmetrical Joint Pain & Swelling</button>
+            <button class="symptom-chip" data-symptom="Morning Stiffness">Morning Joint Stiffness (&gt;30 min)</button>
+            <button class="symptom-chip" data-symptom="Reduced Motion">Restricted Joint Range of Motion</button>
+            <button class="symptom-chip" data-symptom="Lumbar Spine Pain">Chronic Lower Back / Lumbar Pain</button>
+            <button class="symptom-chip" data-symptom="Sciatica Pain">Radiating Sciatica Leg Pain</button>
+            <button class="symptom-chip" data-symptom="Neck Stiffness">Neck & Cervical Spine Stiffness</button>
+          </div>
+        </div>
+
+        <!-- 6. Dermatological & Allergic -->
+        <div class="symptom-category-section">
+          <span class="category-label"><i class="fa-solid fa-hand-dots text-rose"></i> Dermatological & Cutaneous</span>
+          <div class="chip-cloud">
+            <button class="symptom-chip" data-symptom="Skin Rash & Itching">Erythematous Itchy Skin Rash</button>
+            <button class="symptom-chip" data-symptom="Urticarial Wheals">Transient Urticarial Wheals (Hives)</button>
+            <button class="symptom-chip" data-symptom="Cutaneous Blisters">Cutaneous Blisters & Vesicles</button>
+            <button class="symptom-chip" data-symptom="Flaky Scaling">Flaky Skin Scaling & Plaques</button>
+            <button class="symptom-chip" data-symptom="Facial Swelling">Facial / Angioedema Swelling</button>
+          </div>
+        </div>
+
+        <!-- 7. Endocrine & Systemic -->
+        <div class="symptom-category-section">
+          <span class="category-label"><i class="fa-solid fa-droplet text-cyan"></i> Endocrine, Renal & Systemic</span>
+          <div class="chip-cloud">
+            <button class="symptom-chip" data-symptom="Excessive Thirst">Excessive Thirst (Polydipsia)</button>
+            <button class="symptom-chip" data-symptom="Frequent Urination">Frequent Urination (Polyuria)</button>
+            <button class="symptom-chip" data-symptom="Burning Urination">Burning Sensation (Dysuria)</button>
+            <button class="symptom-chip" data-symptom="Rapid Weight Loss">Unexplained Rapid Weight Loss</button>
+            <button class="symptom-chip" data-symptom="Extreme Lethargy">Extreme Chronic Lethargy</button>
+          </div>
+        </div>
+
+        <!-- Selected Symptoms Bar -->
+        <div class="selected-symptoms-tray">
+          <div class="tray-top-bar">
+            <span>Selected Symptoms (<strong id="selected-count">0</strong>):</span>
+            <button id="clear-symptoms-btn" class="btn-clear-tray"><i class="fa-solid fa-trash-can"></i> Clear All</button>
+          </div>
+          <div class="selected-tags-box" id="selected-tags">
+            <span class="no-selection-hint">No symptoms selected yet. Click symptom chips above.</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT COLUMN: REAL-TIME INFERENCE OUTPUT -->
+      <div class="triage-output-col">
+        
+        <!-- Empty State -->
+        <div id="triage-empty-state" class="triage-empty-card">
+          <div class="empty-icon-ring">
+            <i class="fa-solid fa-notes-medical"></i>
+          </div>
+          <h3>AI Diagnosis Console Standby</h3>
+          <p>Click one or more symptom chips from the matrix or choose a quick preset to trigger real-time neural network inference.</p>
+        </div>
+
+        <!-- Active Result Card -->
+        <div id="triage-results" class="triage-result-card" style="display: none;">
+          
+          <div class="result-top-badge">
+            <span class="engine-badge"><i class="fa-solid fa-microchip"></i> INFERENCE RESULT (Dense MLP 94.81%)</span>
+            <span id="risk-level-tag" class="risk-level-high">HIGH RISK</span>
+          </div>
+
+          <!-- Disease Name & Confidence -->
+          <div class="result-condition-section">
+            <h3 id="top-disease-name" class="condition-name">Coronary Atherosclerosis / Ischemic Heart Disease</h3>
+            
+            <div class="confidence-bar-row">
+              <div class="conf-meta">
+                <span>Model Confidence</span>
+                <strong id="top-confidence-value" class="conf-val text-accent">91%</strong>
+              </div>
+              <div class="conf-track">
+                <div id="risk-progress-bar" class="conf-fill" style="width: 91%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recommended Specialist Drawer -->
+          <div class="specialist-referral-container">
+            
+            <div class="specialist-header-clickable" id="specialist-toggle-header">
+              <div class="spec-icon-box">
+                <i class="fa-solid fa-user-doctor"></i>
+              </div>
+              <div class="spec-details">
+                <span class="spec-label">RECOMMENDED SPECIALIST</span>
+                <h4 id="specialist-name" class="spec-title">Cardiologist (Heart & Vascular Specialist)</h4>
+                <span id="specialist-count" class="spec-meta"><i class="fa-solid fa-hospital-user"></i> 65 Verified Specialists Mapped</span>
+              </div>
+              <button class="btn-toggle-doctors" id="btn-toggle-specialists" aria-label="Toggle doctor list">
+                <span class="toggle-text">View Doctors</span>
+                <i class="fa-solid fa-chevron-down chevron-icon" id="specialist-chevron"></i>
+              </button>
+            </div>
+
+            <!-- Expandable Doctor List Drawer -->
+            <div class="specialist-drawer" id="specialist-doctors-drawer">
+              <div class="drawer-inner-header">
+                <span>Matched Senior Specialists:</span>
+                <small>Click to view consultation slots</small>
+              </div>
+              <div class="doctor-mini-list" id="specialist-doctors-list">
+                <!-- Populated dynamically via simulator.js -->
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Differential Diagnosis Distribution -->
+          <div class="differential-section">
+            <span class="diff-header-title"><i class="fa-solid fa-chart-simple text-cyan"></i> Differential Diagnosis Probabilities (Top-3):</span>
+            
+            <div class="alt-item">
+              <div class="alt-meta">
+                <span id="alt-1-name">Hypertensive Crisis</span>
+                <span id="alt-1-pct" class="alt-pct-num">52%</span>
+              </div>
+              <div class="alt-track"><div id="alt-1-bar" class="alt-fill" style="width: 52%;"></div></div>
+            </div>
+
+            <div class="alt-item">
+              <div class="alt-meta">
+                <span id="alt-2-name">Cardiac Arrhythmia</span>
+                <span id="alt-2-pct" class="alt-pct-num">34%</span>
+              </div>
+              <div class="alt-track"><div id="alt-2-bar" class="alt-fill" style="width: 34%;"></div></div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Universal High-End Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Column 1: Brand & Philosophy -->
+        <div class="footer-col footer-brand-col">
+          <a href="index.html" class="nav-brand">
+            <div class="brand-monogram">GR</div>
+            <span class="brand-name">Golam<span class="brand-accent">Rabbani</span></span>
+          </a>
+          <p>
+            Computer Science BSc Graduate from AIUB specializing in building end-to-end AI Machine Learning Systems, Enterprise Web Applications, and Cross-Platform Mobile Apps.
+          </p>
+          <a href="mailto:golamrabbani.dev0@gmail.com" class="footer-email-chip">
+            <span class="status-pulse" style="width: 6px; height: 6px;"></span>
+            <span>golamrabbani.dev0@gmail.com</span>
+          </a>
+        </div>
+
+        <!-- Column 2: Navigation Routes -->
+        <div class="footer-col">
+          <h4><i class="fa-solid fa-compass"></i> Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html"><i class="fa-solid fa-house-chimney"></i> Home</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-user-astronaut"></i> About</a></li>
+            <li><a href="simulator.html"><i class="fa-solid fa-microchip text-accent"></i> Live AI Demo</a></li>
+            <li><a href="projects.html"><i class="fa-solid fa-code-branch"></i> Projects</a></li>
+            <li><a href="skills.html"><i class="fa-solid fa-layer-group"></i> Skills</a></li>
+            <li><a href="research.html"><i class="fa-solid fa-flask-vial"></i> Research</a></li>
+            <li><a href="terminal.html"><i class="fa-solid fa-terminal"></i> Terminal</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-paper-plane"></i> Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Academic Credentials & Connect -->
+        <div class="footer-col">
+          <h4><i class="fa-solid fa-graduation-cap"></i> Academic & Connect</h4>
+          <div class="footer-academic-card">
+            <h5>AIUB — CSE Department</h5>
+            <p>142 Credits Completed • Student ID: 22-46560-1</p>
+          </div>
+          <div class="footer-quick-btns">
+            <a href="assets/docs/bsc_grade_report.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline" title="Official Grade Report">
+              <i class="fa-solid fa-file-pdf text-accent"></i> B.Sc Grade Report
+            </a>
+            <a href="https://github.com/GolamRabbani09" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline" title="GitHub">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Golam Rabbani. Crafted with precision & clean code.</p>
+        <button id="back-to-top" class="back-to-top-btn" title="Back to top" aria-label="Back to top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+          <i class="fa-solid fa-arrow-up"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FULL DOCTOR & SPECIALIST DIRECTORY MODAL -->
+  <div class="modal-backdrop" id="doctor-modal-backdrop">
+    <div class="doctor-modal-window">
+      <div class="doctor-modal-header">
+        <div class="modal-title-group">
+          <i class="fa-solid fa-hospital-user text-accent"></i>
+          <div>
+            <h3>Verified Medical Specialists Directory</h3>
+            <p>Smart Health Assistant Referral Database (296 Verified Physicians)</p>
+          </div>
+        </div>
+        <button class="modal-close-btn" id="close-doctor-modal" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="modal-search-bar-wrap">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" id="doctor-search-input" placeholder="Search doctor by name, hospital, degree, or specialty...">
+      </div>
+
+      <div class="modal-spec-tabs">
+        <button class="spec-tab active" data-spec="all">All (296)</button>
+        <button class="spec-tab" data-spec="Cardiology">Cardiology (65)</button>
+        <button class="spec-tab" data-spec="Pulmonology">Pulmonology (42)</button>
+        <button class="spec-tab" data-spec="Neurology">Neurology (38)</button>
+        <button class="spec-tab" data-spec="Orthopedics">Orthopedics (51)</button>
+        <button class="spec-tab" data-spec="Gastroenterology">Gastroenterology (34)</button>
+        <button class="spec-tab" data-spec="Dermatology">Dermatology (31)</button>
+        <button class="spec-tab" data-spec="General Medicine">General Medicine (35)</button>
+      </div>
+
+      <div class="modal-doctor-grid" id="modal-doctor-grid">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="sim-toast-container" class="sim-toast-container"></div>
+
+  <!-- Standalone Simulator Engine -->
+  <script src="simulator.js"></script>
+</body>
+</html>

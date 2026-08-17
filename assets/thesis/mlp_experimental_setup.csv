@@ -1,0 +1,15 @@
+Setting,Value
+Total samples (raw),246945
+After dedup + rare-class filter,187850
+Diseases (classes),512
+Symptom features,377
+Train/Test split,85% / 15% (stratified)
+Rare-class threshold,< 20 samples removed
+Model,MLP (512-256-128) + BatchNorm + Dropout
+Dropout rates,0.35 / 0.30 / 0.20
+Optimizer / LR,Adam / 1e-3
+Batch size,1024
+Max epochs,80
+Early stopping,patience=8 on val top-1
+Random seed,42
+Hardware,"Google Colab, NVIDIA T4 GPU"

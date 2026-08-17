@@ -1,0 +1,6 @@
+# robots.txt for Golam Rabbani Portfolio
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://golamrabbani09.github.io/sitemap.xml

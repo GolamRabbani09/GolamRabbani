@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Golam Rabbani — AI & Full-Stack Software Engineer | Bio & Journey</title>
+  <meta name="description" content="Explore Golam Rabbani's background, AIUB CSE academic journey (142 credits), machine learning research, and full-stack engineering competencies.">
+  <meta name="keywords" content="Golam Rabbani, About Golam Rabbani, AIUB CSE, Machine Learning Engineer, Software Architect">
+  <meta name="author" content="Golam Rabbani">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://golamrabbani09.github.io/about.html">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="About Golam Rabbani — AI & Full-Stack Software Engineer">
+  <meta property="og:description" content="AIUB Computer Science graduate specializing in AI/ML systems, enterprise web applications, and Flutter mobile engineering.">
+  <meta property="og:url" content="https://golamrabbani09.github.io/about.html">
+  <meta property="og:image" content="assets/profile.jpg">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Particle Canvas & Cursor Glow -->
+  <canvas id="particle-canvas"></canvas>
+  <div class="cursor-glow" id="cursor-glow"></div>
+
+  <!-- Toast Notification System -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Universal Navigation Bar -->
+  <header class="navbar-wrapper" id="navbar">
+    <nav class="navbar-container">
+      <a href="index.html" class="nav-brand" title="Golam Rabbani — Home">
+        <div class="brand-monogram">GR</div>
+        <span class="brand-name">Golam<span class="brand-accent">Rabbani</span></span>
+      </a>
+
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-links">
+          <li><a href="about.html" class="nav-link active"><i class="fa-solid fa-user-astronaut"></i> <span>About</span></a></li>
+          <li><a href="simulator.html" class="nav-link nav-link-special"><i class="fa-solid fa-microchip"></i> <span>AI Demo</span> <span class="nav-pill-badge">Live</span></a></li>
+          <li><a href="projects.html" class="nav-link"><i class="fa-solid fa-code-branch"></i> <span>Projects</span></a></li>
+          <li><a href="skills.html" class="nav-link"><i class="fa-solid fa-layer-group"></i> <span>Skills</span></a></li>
+          <li><a href="research.html" class="nav-link"><i class="fa-solid fa-flask-vial"></i> <span>Research</span></a></li>
+          <li><a href="assets/docs/bsc_grade_report.pdf" target="_blank" rel="noopener noreferrer" class="nav-link nav-link-grade" title="Official AIUB Grade Report (PDF)"><i class="fa-solid fa-graduation-cap"></i> <span>B.Sc Grade</span> <span class="nav-tag-badge">PDF</span></a></li>
+          <li><a href="terminal.html" class="nav-link"><i class="fa-solid fa-terminal"></i> <span>Terminal</span></a></li>
+          <li><a href="contact.html" class="nav-link"><i class="fa-solid fa-paper-plane"></i> <span>Contact</span></a></li>
+        </ul>
+      </div>
+
+      <div class="nav-actions">
+        <a href="https://github.com/GolamRabbani09" target="_blank" rel="noopener noreferrer" class="btn btn-icon" title="GitHub Profile">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="contact.html" class="btn btn-primary btn-sm nav-cta-btn">
+          <span>Let's Talk</span>
+          <i class="fa-solid fa-arrow-right-long"></i>
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    
+    <!-- PAGE HERO SECTION -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero-content" data-reveal>
+          <div class="page-hero-badge">
+            <span class="status-pulse"></span>
+            <span>ENGINEERING DNA & ACADEMIC FOUNDATION</span>
+          </div>
+          <h1 class="page-hero-title">
+            Architecting <span class="highlight-name">Intelligent AI</span> & Resilient Systems
+          </h1>
+          <p class="page-hero-desc">
+            I am a Computer Science Graduate from <strong>American International University-Bangladesh (AIUB)</strong> who bridges theoretical machine learning research with robust, scalable software architectures. From training deep neural networks across 200K+ clinical records to building multi-tenant enterprise ERP suites, I build software that solves real-world problems.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CORE ENGINEERING PILLARS -->
+    <section class="section-padding" style="padding-top: 1rem; padding-bottom: 4rem;">
+      <div class="container">
+        <div class="about-grid">
+          
+          <div class="about-card" data-reveal>
+            <div class="about-card-icon">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+            <h3>Applied AI & Machine Learning</h3>
+            <p>
+              Specialized in processing sparse, high-dimensional tabular datasets. Trained, benchmarked, and cross-validated 6 distinct ML architectures (TabNet, Deep MLP, XGBoost, LightGBM, Random Forest, Logistic Regression) on 200,000+ medical records across 512 disease categories.
+            </p>
+            <ul class="about-feature-list">
+              <li><i class="fa-solid fa-check-circle"></i> 5-Fold Stratified Cross-Validation & Hyperparameter Tuning</li>
+              <li><i class="fa-solid fa-check-circle"></i> TabNet Self-Attention & Deep Neural MLP Pipelines (PyTorch/Keras)</li>
+              <li><i class="fa-solid fa-check-circle"></i> Sub-20ms Serialized Model Inference over FastAPI Backends</li>
+            </ul>
+          </div>
+
+          <div class="about-card" data-reveal>
+            <div class="about-card-icon">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <h3>Full-Stack & Systems Architecture</h3>
+            <p>
+              Experienced in building enterprise-grade multi-tenant web applications and cross-platform mobile apps. Engineered <strong>SmartERP</strong> (Django REST Framework + React) and cross-platform health clients with Flutter & Dart.
+            </p>
+            <ul class="about-feature-list">
+              <li><i class="fa-solid fa-check-circle"></i> Asynchronous RESTful API development with FastAPI & Pydantic</li>
+              <li><i class="fa-solid fa-check-circle"></i> Relational database schema design (PostgreSQL, SQLite, MySQL)</li>
+              <li><i class="fa-solid fa-check-circle"></i> Mobile frontend development using Flutter, Dart & State Management</li>
+            </ul>
+          </div>
+
+          <div class="about-card" data-reveal>
+            <div class="about-card-icon">
+              <i class="fa-solid fa-cube"></i>
+            </div>
+            <h3>3D Graphics, Low-Level & Security</h3>
+            <p>
+              Solid systems programming foundation in C++ and OpenGL. Created a 60 FPS real-time 3D village simulation engine with dynamic volumetric day/night lighting cycles, GLSL shaders, and developed socket-level network security scanners in Python.
+            </p>
+            <ul class="about-feature-list">
+              <li><i class="fa-solid fa-check-circle"></i> Real-time 3D graphics rendering & GLSL lighting shaders in C++</li>
+              <li><i class="fa-solid fa-check-circle"></i> Multithreaded TCP/UDP socket vulnerability scanning & port auditing</li>
+              <li><i class="fa-solid fa-check-circle"></i> Computer Vision feature extraction (Sobel, Canny, Classifiers)</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ACADEMIC FOUNDATION & AIUB PROFILE -->
+    <section class="section-padding" style="background: rgba(15, 23, 42, 0.4); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-subtitle">ACADEMIC EXCELLENCE</span>
+          <h2 class="section-title">Education & Academic Journey</h2>
+          <p class="section-desc">Completed 142 rigorous credits in Computer Science & Engineering at AIUB.</p>
+        </div>
+
+        <div style="max-width: 920px; margin: 0 auto;" data-reveal>
+          <div class="research-showcase-card" style="padding: 2.5rem;">
+            <div class="research-header-row">
+              <div class="research-badge-title">
+                <div class="research-icon" style="background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald);">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div>
+                  <span class="paper-type">BACHELOR OF SCIENCE DEGREE</span>
+                  <h3 style="font-size: 1.5rem; color: #fff; margin: 0.3rem 0;">American International University - Bangladesh (AIUB)</h3>
+                  <span class="paper-authors">Department of Computer Science & Engineering • Student ID: <strong>22-46560-1</strong></span>
+                </div>
+              </div>
+              <div>
+                <a href="assets/docs/bsc_grade_report.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                  <i class="fa-solid fa-file-pdf text-accent"></i> Official Grade Report PDF
+                </a>
+              </div>
+            </div>
+
+            <div style="margin-top: 1.5rem; line-height: 1.7; color: var(--text-muted);">
+              <p>
+                During my undergraduate studies at AIUB, I completed <strong>54 courses (142 credits)</strong> encompassing Data Structures, Algorithms, Artificial Intelligence, Machine Learning, Data Warehousing & Data Mining, Computer Networks, Operating Systems, Database Management Systems, Software Engineering, and Computer Graphics.
+              </p>
+              <p style="margin-top: 1rem;">
+                My undergraduate research thesis, titled <em>"Smart Health Assistant: Machine Learning-Based Disease Prediction & Doctor Recommendation System"</em>, was completed under the supervision of <strong>Syeda Anika Tasnim</strong>, evaluating 6 AI models on large-scale clinical data.
+              </p>
+            </div>
+
+            <div class="project-metrics" style="margin-top: 2rem;">
+              <div class="metric"><strong>142</strong><span>Completed Credits</span></div>
+              <div class="metric"><strong>54</strong><span>Academic Courses</span></div>
+              <div class="metric"><strong>B.Sc CSE</strong><span>Degree Completed</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK CALL TO ACTION -->
+    <section class="section-padding" style="text-align: center;">
+      <div class="container" data-reveal>
+        <h2 style="font-size: 2.2rem; margin-bottom: 1rem; font-family: var(--font-heading);">Ready to collaborate or explore projects?</h2>
+        <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 2rem auto;">
+          Check out my featured engineering systems, launch the live AI diagnosis simulator, or drop me a direct message.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="projects.html" class="btn btn-primary">
+            <i class="fa-solid fa-cubes"></i> Explore Projects
+          </a>
+          <a href="simulator.html" class="btn btn-secondary">
+            <i class="fa-solid fa-play"></i> Launch AI Demo
+          </a>
+          <a href="contact.html" class="btn btn-outline">
+            <i class="fa-solid fa-paper-plane"></i> Contact Golam
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Universal High-End Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Column 1: Brand & Philosophy -->
+        <div class="footer-col footer-brand-col">
+          <a href="index.html" class="nav-brand">
+            <div class="brand-monogram">GR</div>
+            <span class="brand-name">Golam<span class="brand-accent">Rabbani</span></span>
+          </a>
+          <p>
+            Computer Science BSc Graduate from AIUB specializing in building end-to-end AI Machine Learning Systems, Enterprise Web Applications, and Cross-Platform Mobile Apps.
+          </p>
+          <a href="mailto:golamrabbani.dev0@gmail.com" class="footer-email-chip">
+            <span class="status-pulse" style="width: 6px; height: 6px;"></span>
+            <span>golamrabbani.dev0@gmail.com</span>
+          </a>
+        </div>
+
+        <!-- Column 2: Navigation Routes -->
+        <div class="footer-col">
+          <h4><i class="fa-solid fa-compass"></i> Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html"><i class="fa-solid fa-house-chimney"></i> Home</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-user-astronaut"></i> About</a></li>
+            <li><a href="simulator.html"><i class="fa-solid fa-microchip text-accent"></i> Live AI Demo</a></li>
+            <li><a href="projects.html"><i class="fa-solid fa-code-branch"></i> Projects</a></li>
+            <li><a href="skills.html"><i class="fa-solid fa-layer-group"></i> Skills</a></li>
+            <li><a href="research.html"><i class="fa-solid fa-flask-vial"></i> Research</a></li>
+            <li><a href="terminal.html"><i class="fa-solid fa-terminal"></i> Terminal</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-paper-plane"></i> Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Academic Credentials & Connect -->
+        <div class="footer-col">
+          <h4><i class="fa-solid fa-graduation-cap"></i> Academic & Connect</h4>
+          <div class="footer-academic-card">
+            <h5>AIUB — CSE Department</h5>
+            <p>142 Credits Completed • Student ID: 22-46560-1</p>
+          </div>
+          <div class="footer-quick-btns">
+            <a href="assets/docs/bsc_grade_report.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline" title="Official Grade Report">
+              <i class="fa-solid fa-file-pdf text-accent"></i> B.Sc Grade Report
+            </a>
+            <a href="https://github.com/GolamRabbani09" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline" title="GitHub">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Golam Rabbani. Crafted with precision & clean code.</p>
+        <button id="back-to-top" class="back-to-top-btn" title="Back to top" aria-label="Back to top">
+          <i class="fa-solid fa-arrow-up"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

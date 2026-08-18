@@ -207,11 +207,11 @@ function initTypingEffect() {
   if (!typedTextSpan) return;
 
   const textArray = [
+    "B.Sc in CSE Graduate from AIUB",
     "AI & Machine Learning Engineer",
     "Data Science & Data Analyst",
     "Full-Stack Web Architect (Django/React)",
     "Mobile Systems Specialist (Flutter)",
-    "B.Sc in CSE Graduate from AIUB",
     "Graphic designer "
   ];
   

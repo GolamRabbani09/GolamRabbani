@@ -859,6 +859,7 @@ function initTerminalCLI() {
       --------------------------------------------------
       <span class="text-accent">about</span>       - Summary of Golam Rabbani's engineering profile
       <span class="text-accent">skills</span>      - Full technical skill stack breakdown
+      <span class="text-accent">experience</span>  - Professional experience & internship details
       <span class="text-accent">projects</span>    - List of key repositories and systems
       <span class="text-accent">thesis</span>      - Details on B.Sc Thesis (Smart Health Assistant)
       <span class="text-accent">grade</span>       - View official B.Sc Grade Report PDF
@@ -873,14 +874,16 @@ function initTerminalCLI() {
       <strong class="text-accent">Golam Rabbani — Curriculum Vitae (CV)</strong>
       --------------------------------------------------
       • Specialization: AI & Full-Stack Software Engineer (Major: Info Systems, Minor: Comp Eng)
-      • Education: B.Sc in CSE, AIUB (145 Credits Completed)
+      • Education: B.Sc in CSE, AIUB (148 Credits Completed)
+      • Experience: Software Development Intern at Dot BD Solutions Ltd. (Odoo ERP, Python)
       • View Online & Printable PDF: <a href="cv.html" class="link-highlight">Open Golam Rabbani CV Page (A4 Print Ready) ↗</a>
     `,
     resume: `
       <strong class="text-accent">Golam Rabbani — Curriculum Vitae (CV)</strong>
       --------------------------------------------------
       • Specialization: AI & Full-Stack Software Engineer (Major: Info Systems, Minor: Comp Eng)
-      • Education: B.Sc in CSE, AIUB (145 Credits Completed)
+      • Education: B.Sc in CSE, AIUB (148 Credits Completed)
+      • Experience: Software Development Intern at Dot BD Solutions Ltd. (Odoo ERP, Python)
       • View Online & Printable PDF: <a href="cv.html" class="link-highlight">Open Golam Rabbani CV Page (A4 Print Ready) ↗</a>
     `,
     about: `
@@ -888,6 +891,7 @@ function initTerminalCLI() {
       --------------------------------------------------
       • B.Sc in CSE graduate from American International University-Bangladesh (AIUB).
       • Major in Information Systems | Minor in Computer Engineering.
+      • Experience: Software Development Intern at Dot BD Solutions Ltd. (Odoo ERP, Python).
       • Combines machine learning research (TabNet, XGBoost, MLP) with production full-stack engineering (Django, React, FastAPI, Flutter).
       • Proven builder of enterprise ERPs, clinical AI triage systems, 3D graphics engines, and cybersecurity scanners.
     `,
@@ -898,6 +902,28 @@ function initTerminalCLI() {
       [Backend/APIs]   : FastAPI, Django & DRF, Python, Pydantic, PostgreSQL, SQLite, REST
       [Mobile/Frontend]: Flutter, Dart, React.js, JavaScript (ES6+), HTML5, CSS3/Grid
       [Graphics/Tools] : C++, OpenGL 3D, Git, GitHub, Linux/Bash, Render Cloud, Colab GPU
+    `,
+    experience: `
+      <strong class="text-accent">Internship & Professional Experience:</strong>
+      --------------------------------------------------
+      • Role       : <strong>Software Development Intern</strong>
+      • Company    : Dot BD Solutions Ltd. (01 May 2026 - 29 July 2026)
+      • Tech Stack : Odoo ERP • Python • Business Process Automation • Module Development
+      • Key Contributions:
+        - Customized & extended Odoo ERP systems, gaining hands-on system architecture expertise.
+        - Collaborated on business process automation integrating inventory, finance, and human resources.
+        - Gained practical experience in structured learning methodologies & production coding practices.
+    `,
+    internship: `
+      <strong class="text-accent">Internship & Professional Experience:</strong>
+      --------------------------------------------------
+      • Role       : <strong>Software Development Intern</strong>
+      • Company    : Dot BD Solutions Ltd. (01 May 2026 - 29 July 2026)
+      • Tech Stack : Odoo ERP • Python • Business Process Automation • Module Development
+      • Key Contributions:
+        - Customized & extended Odoo ERP systems, gaining hands-on system architecture expertise.
+        - Collaborated on business process automation integrating inventory, finance, and human resources.
+        - Gained practical experience in structured learning methodologies & production coding practices.
     `,
     projects: `
       <strong class="text-accent">Authentic Repositories (@GolamRabbani09):</strong>
@@ -926,7 +952,7 @@ function initTerminalCLI() {
       • Student Name: <strong>RABBANI, GOLAM</strong> (Student ID: 22-46560-1)
       • Degree: Bachelor of Science in Computer Science & Engineering
       • Specialization: Major in Information Systems | Minor in Computer Engineering
-      • Completed: 145 Credits | 55 Completed Courses
+      • Completed: 148 Credits | 56 Completed Courses
       • Official PDF: <a href="assets/docs/GradeReportByCurriculum22-46560-1.pdf" target="_blank" class="link-highlight">Open Official B.Sc Grade Report PDF ↗</a>
     `,
     bsc: `
@@ -935,7 +961,7 @@ function initTerminalCLI() {
       • Student Name: <strong>RABBANI, GOLAM</strong> (Student ID: 22-46560-1)
       • Degree: Bachelor of Science in Computer Science & Engineering
       • Specialization: Major in Information Systems | Minor in Computer Engineering
-      • Completed: 145 Credits | 55 Completed Courses
+      • Completed: 148 Credits | 56 Completed Courses
       • Official PDF: <a href="assets/docs/GradeReportByCurriculum22-46560-1.pdf" target="_blank" class="link-highlight">Open Official B.Sc Grade Report PDF ↗</a>
     `,
     doctors: `

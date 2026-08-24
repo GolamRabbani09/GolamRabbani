@@ -111,6 +111,28 @@
         border-bottom: 2px solid var(--accent);
         padding-bottom: 18px;
         margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+      }
+
+      .header-info {
+        flex: 1;
+      }
+
+      .header-photo-container {
+        flex-shrink: 0;
+      }
+
+      .header-photo {
+        width: 110px;
+        height: 110px;
+        border-radius: 6px;
+        object-fit: cover;
+        object-position: center top;
+        border: 2.5px solid var(--accent);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
       }
 
       .name-title {
@@ -395,37 +417,42 @@
     <main class="cv-container">
       <!-- HEADER -->
       <header class="header">
-        <div class="name-title">
-          <h1>GOLAM RABBANI</h1>
-          <div class="role-tagline">
-            Full-Stack Web Application Software & AI Engineering
+        <div class="header-info">
+          <div class="name-title">
+            <h1>GOLAM RABBANI</h1>
+            <div class="role-tagline">
+              Full-Stack Web Application Software & AI Engineering
+            </div>
+          </div>
+          <div class="contact-grid">
+            <div class="contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:golamrabbani.dev0@gmail.com"
+                >golamrabbani.dev0@gmail.com</a
+              >
+            </div>
+            <div class="contact-item">
+              <i class="fa-brands fa-github"></i>
+              <a href="https://github.com/GolamRabbani09" target="_blank"
+                >github.com/GolamRabbani09</a
+              >
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-globe"></i>
+              <a
+                href="https://golamrabbani09.github.io/GolamRabbani.github.io/index.html"
+                target="_blank"
+                >https://golamrabbani09.github.io/GolamRabbani.github.io/index.html</a
+              >
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Dhaka, Bangladesh </span>
+            </div>
           </div>
         </div>
-        <div class="contact-grid">
-          <div class="contact-item">
-            <i class="fa-solid fa-envelope"></i>
-            <a href="mailto:golamrabbani.dev0@gmail.com"
-              >golamrabbani.dev0@gmail.com</a
-            >
-          </div>
-          <div class="contact-item">
-            <i class="fa-brands fa-github"></i>
-            <a href="https://github.com/GolamRabbani09" target="_blank"
-              >github.com/GolamRabbani09</a
-            >
-          </div>
-          <div class="contact-item">
-            <i class="fa-solid fa-globe"></i>
-            <a
-              href="https://golamrabbani09.github.io/GolamRabbani.github.io/index.html"
-              target="_blank"
-              >https://golamrabbani09.github.io/GolamRabbani.github.io/index.html</a
-            >
-          </div>
-          <div class="contact-item">
-            <i class="fa-solid fa-location-dot"></i>
-            <span>Dhaka, Bangladesh </span>
-          </div>
+        <div class="header-photo-container">
+          <img class="header-photo" src="assets/profile.jpg" alt="Golam Rabbani">
         </div>
       </header>
 

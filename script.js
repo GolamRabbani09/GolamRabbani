@@ -927,7 +927,7 @@ function initTerminalCLI() {
       • Degree: Bachelor of Science in Computer Science & Engineering
       • Specialization: Major in Information Systems | Minor in Computer Engineering
       • Completed: 142 Credits | 54 Completed Courses
-      • Official PDF: <a href="assets/docs/bsc_grade_report.pdf" target="_blank" class="link-highlight">Open Official B.Sc Grade Report PDF ↗</a>
+      • Official PDF: <a href="assets/docs/GradeReportByCurriculum22-46560-1.pdf" target="_blank" class="link-highlight">Open Official B.Sc Grade Report PDF ↗</a>
     `,
     bsc: `
       <strong class="text-accent">B.Sc Grade Report (AIUB - CSE):</strong>
@@ -936,7 +936,7 @@ function initTerminalCLI() {
       • Degree: Bachelor of Science in Computer Science & Engineering
       • Specialization: Major in Information Systems | Minor in Computer Engineering
       • Completed: 142 Credits | 54 Completed Courses
-      • Official PDF: <a href="assets/docs/bsc_grade_report.pdf" target="_blank" class="link-highlight">Open Official B.Sc Grade Report PDF ↗</a>
+      • Official PDF: <a href="assets/docs/GradeReportByCurriculum22-46560-1.pdf" target="_blank" class="link-highlight">Open Official B.Sc Grade Report PDF ↗</a>
     `,
     doctors: `
       Opening verified medical specialists directory... (296 doctors mapped across Cardiology, Pulmonology, Neurology, Orthopedics, Gastroenterology, Dermatology)

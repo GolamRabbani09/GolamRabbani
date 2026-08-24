@@ -873,14 +873,14 @@ function initTerminalCLI() {
       <strong class="text-accent">Golam Rabbani — Curriculum Vitae (CV)</strong>
       --------------------------------------------------
       • Specialization: AI & Full-Stack Software Engineer (Major: Info Systems, Minor: Comp Eng)
-      • Education: B.Sc in CSE, AIUB (142 Credits Completed)
+      • Education: B.Sc in CSE, AIUB (145 Credits Completed)
       • View Online & Printable PDF: <a href="cv.html" class="link-highlight">Open Golam Rabbani CV Page (A4 Print Ready) ↗</a>
     `,
     resume: `
       <strong class="text-accent">Golam Rabbani — Curriculum Vitae (CV)</strong>
       --------------------------------------------------
       • Specialization: AI & Full-Stack Software Engineer (Major: Info Systems, Minor: Comp Eng)
-      • Education: B.Sc in CSE, AIUB (142 Credits Completed)
+      • Education: B.Sc in CSE, AIUB (145 Credits Completed)
       • View Online & Printable PDF: <a href="cv.html" class="link-highlight">Open Golam Rabbani CV Page (A4 Print Ready) ↗</a>
     `,
     about: `
@@ -926,7 +926,7 @@ function initTerminalCLI() {
       • Student Name: <strong>RABBANI, GOLAM</strong> (Student ID: 22-46560-1)
       • Degree: Bachelor of Science in Computer Science & Engineering
       • Specialization: Major in Information Systems | Minor in Computer Engineering
-      • Completed: 142 Credits | 54 Completed Courses
+      • Completed: 145 Credits | 55 Completed Courses
       • Official PDF: <a href="assets/docs/GradeReportByCurriculum22-46560-1.pdf" target="_blank" class="link-highlight">Open Official B.Sc Grade Report PDF ↗</a>
     `,
     bsc: `
@@ -935,7 +935,7 @@ function initTerminalCLI() {
       • Student Name: <strong>RABBANI, GOLAM</strong> (Student ID: 22-46560-1)
       • Degree: Bachelor of Science in Computer Science & Engineering
       • Specialization: Major in Information Systems | Minor in Computer Engineering
-      • Completed: 142 Credits | 54 Completed Courses
+      • Completed: 145 Credits | 55 Completed Courses
       • Official PDF: <a href="assets/docs/GradeReportByCurriculum22-46560-1.pdf" target="_blank" class="link-highlight">Open Official B.Sc Grade Report PDF ↗</a>
     `,
     doctors: `

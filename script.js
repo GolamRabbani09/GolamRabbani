@@ -207,7 +207,7 @@ function initTypingEffect() {
   if (!typedTextSpan) return;
 
   const textArray = [
-    "B.Sc in CSE Graduate from AIUB",
+    "B.Sc in CSE from AIUB",
     "AI & Machine Learning Engineer",
     "Data Science & Data Analyst",
     "Full-Stack Web Architect (Django/React)",
